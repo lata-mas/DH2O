@@ -14,15 +14,28 @@ contador = 0
 tot=0
 t = 0
 
+T2=0
+contador2 = 0
+tot2=0
+t2 = 0
+
 #función que realizara el conteo digital para el sensor
 def my_callback(l):
     global contador,tot
     contador = contador +1
-    tot = contador  
+    tot = contador 
+
+def my_callback2(l):
+    global contador2,tot2
+    contador2 = contador2 +1
+    tot2 = contador2  
 
 #declarar el pin de entrada como trigger y mandando a llamar la función callback  
 inpt = Pin(4, Pin.IN)
-inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
+inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback) 
+
+inpt2 = Pin(2, Pin.IN)
+inpt2.irq(trigger=Pin.IRQ_RISING, handler=my_callback2)    
 
 
 #configuración del network
@@ -34,6 +47,12 @@ label  = 'Litros'
 label1 = 'flujo'
 data  = {label: 0}
 data1 = {label1:0}
+
+label2  = 'Litros 2'
+label21 = 'flujo 2'
+data2  = {label2: 0}
+data21 = {label21:0}
+
 red = 'IER'                #Red de internet
 clave = 'acadier2014'      #contraseña de la red
 
@@ -54,16 +73,28 @@ while True:                       #Loop infinito
   T = ((contador*1.0)/320)
   t = ((tot* 60 )/ 6.6166666667)
 
+  T2 = ((contador2*1.0)/320)
+  t2 = ((tot2* 60 )/ 6.6166666667)
+
   try:
 
 #publicación de dtos en thingsboard
     data[label] = T
     data1[label1] = t
+
+    data2[label2] = T2
+    data21[label21] = t2
+
     print("Publishing data")
     publish_thingsboard(token, unique_id,data)
 #    publish_thingsboard(token, unique_id,data1)
+
+    publish_thingsboard(token, unique_id,data2)
+#    publish_thingsboard(token, unique_id,data21)
+
     cnt_boot = 0
     contador = 0
+    contador2 = 0
     cont = 1
 
 #reintentar conexión en caso de fallo
