@@ -1,6 +1,7 @@
 from wifi import do_connect  #importa función para conexión wifi de wifi.py
 from machine import Pin      #libreria para utilizar los GPIO's de la esp
 from funcion import *        #importar la función para publicar el thingsboard
+from funciones import *      #funciones para hacer el código modular
 
 #importar librerías
 import time
@@ -9,16 +10,14 @@ import network
 import sys
 
 #Declaración de variables
-T=0
 contador = 0
 tot=0
-t = 0
 
 #función que realizara el conteo digital para el sensor
 def my_callback(l):
     global contador,tot
     contador = contador +1
-    tot = contador  
+    tot = contador 
 
 #declarar el pin de entrada como trigger y mandando a llamar la función callback  
 inpt = Pin(4, Pin.IN)
@@ -34,8 +33,8 @@ label  = 'Litros'
 label1 = 'flujo'
 data  = {label: 0}
 data1 = {label1:0}
-red = 'IER'                #Red de internet
-clave = 'acadier2014'      #contraseña de la red
+red = 'Interneis'                #Red de internet
+clave = '1223334444'      #contraseña de la red
 
 #credenciales del dispositivo configurado en thingsboard
 unique_id = 'ccfb8fa0-4157-11ea-9ffe-35550336f914'   
@@ -50,18 +49,17 @@ print ("antes")
 
 while True:                       #Loop infinito
 
-#Constantes de conversión del sensor
-  T = ((contador*1.0)/320)
-  t = ((tot* 60 )/ 6.6166666667)
+#Función para las ecuaciones del sensor
+  T1,t1 = ecuaciones(contador,tot)
 
   try:
 
-#publicación de dtos en thingsboard
-    data[label] = T
-    data1[label1] = t
+#publicación de datos en thingsboard
+    data[label] = T1
+    data1[label1] = t1
     print("Publishing data")
     publish_thingsboard(token, unique_id,data)
-#    publish_thingsboard(token, unique_id,data1)
+    #publish_thingsboard(token, unique_id,data1)
     cnt_boot = 0
     contador = 0
     cont = 1
