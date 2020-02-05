@@ -9,7 +9,22 @@ import utime
 import network
 import sys
 
-#Declaración de variables
+#Datos de la red de internet
+red = 'IER'                #Red de internet
+clave = 'acadier2014'      #contraseña de la red
+
+#credenciales del dispositivo configurado en thingsboard
+unique_id = 'ccfb8fa0-4157-11ea-9ffe-35550336f914'   
+token = 'PLcwc21L7r7JuGvfHHVi' 
+
+#Etiquetas para publicar en thingsboard
+lbl  = 'Litros'
+lbl1 = 'flujo'
+
+#variables para los intentos de conexión
+cnt_boot = 0                
+cont = 0
+#Declaración de variables función callback
 contador = 0
 tot=0
 
@@ -23,27 +38,18 @@ def my_callback(l):
 inpt = Pin(4, Pin.IN)
 inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
 
-
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
-
-#Datos de la red de internet
-red = 'IER'                #Red de internet
-clave = 'acadier2014'      #contraseña de la red
-
-#credenciales del dispositivo configurado en thingsboard
-unique_id = 'ccfb8fa0-4157-11ea-9ffe-35550336f914'   
-token = 'PLcwc21L7r7JuGvfHHVi'                       
-
+                      
 #Conexión a internet
 ap_if = network.WLAN(network.AP_IF)
 sta_if.connect(red,clave)
-cnt_boot = 0                 #conteo de intentos de conexión
-cont = 0
+
 print ("antes")
 
-while True:                       #Loop infinito
+#-------------------------Loop infinito----------------------------------
+while True:                      
 
 #Función para las ecuaciones del sensor
   T1,t1 = ecuaciones(contador,tot)
@@ -51,7 +57,7 @@ while True:                       #Loop infinito
   try:
 
 #Empaquetado de datos para publicar en Thingsboard
-    datS1,dat1S1 = datos(T1,t1)
+    datS1,dat1S1 = datos(T1,t1,lbl,lbl1)
 
 #publicación de datos en thingsboard
     print("Publishing data")
