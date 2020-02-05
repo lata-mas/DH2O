@@ -28,13 +28,9 @@ inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
 
-#Declaración de labels y arreglos para exportar a thingsboard
-label  = 'Litros'
-label1 = 'flujo'
-data  = {label: 0}
-data1 = {label1:0}
-red = 'Interneis'                #Red de internet
-clave = '1223334444'      #contraseña de la red
+#Datos de la red de internet
+red = 'IER'                #Red de internet
+clave = 'acadier2014'      #contraseña de la red
 
 #credenciales del dispositivo configurado en thingsboard
 unique_id = 'ccfb8fa0-4157-11ea-9ffe-35550336f914'   
@@ -54,12 +50,15 @@ while True:                       #Loop infinito
 
   try:
 
+#Empaquetado de datos para publicar en Thingsboard
+    datS1,dat1S1 = datos(T1,t1)
+
 #publicación de datos en thingsboard
-    data[label] = T1
-    data1[label1] = t1
     print("Publishing data")
-    publish_thingsboard(token, unique_id,data)
-    #publish_thingsboard(token, unique_id,data1)
+    publish_thingsboard(token, unique_id,datS1)
+    publish_thingsboard(token, unique_id,dat1S1)
+
+#Reinicio de variables
     cnt_boot = 0
     contador = 0
     cont = 1
