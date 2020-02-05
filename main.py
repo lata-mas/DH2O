@@ -1,5 +1,4 @@
 from wifi import do_connect  #importa función para conexión wifi de wifi.py
-from machine import Pin      #libreria para utilizar los GPIO's de la esp
 from funcion import *        #importar la función para publicar el thingsboard
 from funciones import *      #funciones para hacer el código modular
 
@@ -23,20 +22,7 @@ lbl1 = 'flujo'
 
 #variables para los intentos de conexión
 cnt_boot = 0                
-cont = 0
-#Declaración de variables función callback
-contador = 0
-tot=0
-
-#función que realizara el conteo digital para el sensor
-def my_callback(l):
-    global contador,tot
-    contador = contador +1
-    tot = contador 
-
-#declarar el pin de entrada como trigger y mandando a llamar la función callback  
-inpt = Pin(4, Pin.IN)
-inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
+cnt = 0
 
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
@@ -51,8 +37,11 @@ print ("antes")
 #-------------------------Loop infinito----------------------------------
 while True:                      
 
+#Función que realiza el conteo digital del pin 
+  contador1,tot1 = conteo(4)
+
 #Función para las ecuaciones del sensor
-  T1,t1 = ecuaciones(contador,tot)
+  T1,t1 = ecuaciones(contador1,tot1)
 
   try:
 
@@ -66,18 +55,18 @@ while True:
 
 #Reinicio de variables
     cnt_boot = 0
-    contador = 0
-    cont = 1
+    reinicio(contador1) #función que reinicia el contador
+    cnt = 1
 
 #reintentar conexión en caso de fallo
   except Exception as inst:
     print(inst)
     do_connect(red,clave);
     cnt_boot += 1
-    cont += 1
+    cnt += 1
     print("Fail {}".format(cnt_boot))
-    if cont >1:
-        contador = contador
+    if cnt >1:
+        contador1 = contador1
     if cnt_boot > 10: #si falla la reconexión mas de diez veces se reinicia el dispositivo
       machine.reset()
     time.sleep(1)
