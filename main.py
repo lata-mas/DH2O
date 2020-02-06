@@ -1,4 +1,5 @@
 from wifi import do_connect  #importa función para conexión wifi de wifi.py
+from machine import Pin      #libreria para utilizar los GPIO's de la esp
 from funcion import *        #importar la función para publicar el thingsboard
 from funciones import *      #funciones para hacer el código modular
 
@@ -18,11 +19,43 @@ token = 'PLcwc21L7r7JuGvfHHVi'
 
 #Etiquetas para publicar en thingsboard
 lbl  = 'Litros'
-lbl1 = 'flujo'
 
 #variables para los intentos de conexión
 cnt_boot = 0                
-cnt = 0
+cont = 0
+
+#////////////////////////////////////////////////////////////////////////////
+#Declaración de variables función callback
+#contador = 0
+
+#función que realizara el conteo digital para el sensor
+#def my_callback(l):
+    #global contador
+    #contador = contador +1 
+
+#declarar el pin de entrada como trigger y mandando a llamar la función callback  
+#inpt = Pin(4, Pin.IN)
+#inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
+#///////////////////////////////////////////////////////////////////////////
+
+class Conteo:
+  contador = 0
+  pin = 0
+  
+  def my_callback(self):
+    #global contador
+    self.contador = self.contador +1 
+    return self.contador
+
+  def irq(self):
+    inpt = Pin(self.pin, Pin.IN)
+    inpt.irq(trigger=Pin.IRQ_RISING, handler=self.my_callback())
+
+Sensor1 = Conteo() 
+Sensor1.pin = 4
+Sensor1.contador = 0 
+conta = Sensor1.my_callback(           
+
 
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
@@ -32,44 +65,47 @@ sta_if.active(True)
 ap_if = network.WLAN(network.AP_IF)
 sta_if.connect(red,clave)
 
-print ("antes")
+print ("antesih")
+
+
+
 
 #-------------------------Loop infinito----------------------------------
-while True:                      
-
-#Función que realiza el conteo digital del pin 
-  contador1,tot1 = conteo(4)
+while True:  
+  
+  #Sensor1.pin = 4
+  #Sensor1.contador = 0 
+  #conta = Sensor1.my_callback()
 
 #Función para las ecuaciones del sensor
-  T1,t1 = ecuaciones(contador1,tot1)
+  T1 = ecuaciones(conta)
 
   try:
 
 #Empaquetado de datos para publicar en Thingsboard
-    datS1,dat1S1 = datos(T1,t1,lbl,lbl1)
+    datS1 = datos(T1,lbl)
 
 #publicación de datos en thingsboard
     print("Publishing data")
     publish_thingsboard(token, unique_id,datS1)
-    publish_thingsboard(token, unique_id,dat1S1)
 
 #Reinicio de variables
     cnt_boot = 0
-    reinicio(contador1) #función que reinicia el contador
-    cnt = 1
+    conta = 0
+    cont = 1
 
 #reintentar conexión en caso de fallo
   except Exception as inst:
     print(inst)
     do_connect(red,clave);
     cnt_boot += 1
-    cnt += 1
+    cont += 1
     print("Fail {}".format(cnt_boot))
-    if cnt >1:
-        contador1 = contador1
+    if cont >1:
+        contadorr = contadorr
     if cnt_boot > 10: #si falla la reconexión mas de diez veces se reinicia el dispositivo
       machine.reset()
     time.sleep(1)
-  time.sleep(30)
+  time.sleep(10)
   
       
