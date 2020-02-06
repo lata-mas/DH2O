@@ -23,17 +23,39 @@ lbl  = 'Litros'
 #variables para los intentos de conexión
 cnt_boot = 0                
 cont = 0
+
+#////////////////////////////////////////////////////////////////////////////
 #Declaración de variables función callback
-contador = 0
+#contador = 0
 
 #función que realizara el conteo digital para el sensor
-def my_callback(l):
-    global contador
-    contador = contador +1 
+#def my_callback(l):
+    #global contador
+    #contador = contador +1 
 
 #declarar el pin de entrada como trigger y mandando a llamar la función callback  
-inpt = Pin(4, Pin.IN)
-inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
+#inpt = Pin(4, Pin.IN)
+#inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
+#///////////////////////////////////////////////////////////////////////////
+
+class Conteo:
+  contador = 0
+  pin = 0
+  
+  def my_callback(self):
+    #global contador
+    self.contador = self.contador +1 
+    return self.contador
+
+  def irq(self):
+    inpt = Pin(self.pin, Pin.IN)
+    inpt.irq(trigger=Pin.IRQ_RISING, handler=self.my_callback())
+
+Sensor1 = Conteo() 
+Sensor1.pin = 4
+Sensor1.contador = 0 
+conta = Sensor1.my_callback(           
+
 
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
@@ -43,13 +65,20 @@ sta_if.active(True)
 ap_if = network.WLAN(network.AP_IF)
 sta_if.connect(red,clave)
 
-print ("antes")
+print ("antesih")
+
+
+
 
 #-------------------------Loop infinito----------------------------------
-while True:                      
+while True:  
+  
+  #Sensor1.pin = 4
+  #Sensor1.contador = 0 
+  #conta = Sensor1.my_callback()
 
 #Función para las ecuaciones del sensor
-  T1 = ecuaciones(contador)
+  T1 = ecuaciones(conta)
 
   try:
 
@@ -62,7 +91,7 @@ while True:
 
 #Reinicio de variables
     cnt_boot = 0
-    contador = 0
+    conta = 0
     cont = 1
 
 #reintentar conexión en caso de fallo
@@ -73,10 +102,10 @@ while True:
     cont += 1
     print("Fail {}".format(cnt_boot))
     if cont >1:
-        contador = contador
+        contadorr = contadorr
     if cnt_boot > 10: #si falla la reconexión mas de diez veces se reinicia el dispositivo
       machine.reset()
     time.sleep(1)
-  time.sleep(30)
+  time.sleep(10)
   
       
