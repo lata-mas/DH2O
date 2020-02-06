@@ -14,14 +14,14 @@ red = 'IER'                #Red de internet
 clave = 'acadier2014'      #contraseña de la red
 
 #credenciales del dispositivo configurado en thingsboard
-unique_id = 'ccfb8fa0-4157-11ea-9ffe-35550336f914'   
-token = 'PLcwc21L7r7JuGvfHHVi' 
+unique_id = 'ccfb8fa0-4157-11ea-9ffe-35550336f914'
+token = 'PLcwc21L7r7JuGvfHHVi'
 
 #Etiquetas para publicar en thingsboard
 lbl  = 'Litros'
 
 #variables para los intentos de conexión
-cnt_boot = 0                
+cnt_boot = 0
 cont = 0
 
 #////////////////////////////////////////////////////////////////////////////
@@ -31,68 +31,70 @@ cont = 0
 #función que realizara el conteo digital para el sensor
 #def my_callback(l):
     #global contador
-    #contador = contador +1 
+    #contador = contador +1
 
-#declarar el pin de entrada como trigger y mandando a llamar la función callback  
+#declarar el pin de entrada como trigger y mandando a llamar la función callback
 #inpt = Pin(4, Pin.IN)
-#inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)    
+#inpt.irq(trigger=Pin.IRQ_RISING, handler=my_callback)
 #///////////////////////////////////////////////////////////////////////////
 
 class Conteo:
-  contador = 0
-  pin = 0
-  
-  def my_callback(self):
+
+  def __init__(self, pin=0):
     #global contador
-    self.contador = self.contador +1 
+    self.contador = 0
+    self.inpt = Pin(4, Pin.IN)
+
+
+  def my_callback(self,l):
+    #global contador
+    self.contador = self.contador +1
     return self.contador
 
   def irq(self):
-    inpt = Pin(self.pin, Pin.IN)
-    inpt.irq(trigger=Pin.IRQ_RISING, handler=self.my_callback())
+    self.inpt.irq(trigger=Pin.IRQ_RISING, handler=self.my_callback)
 
-Sensor1 = Conteo() 
-Sensor1.pin = 4
-Sensor1.contador = 0 
-conta = Sensor1.my_callback(           
+#Sensor1.pin = 4
+#Sensor1.contador = 0
+#conta = Sensor1.my_callback()
 
 
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
-                      
+
 #Conexión a internet
 ap_if = network.WLAN(network.AP_IF)
 sta_if.connect(red,clave)
 
-print ("antesih")
+print ("antes")
 
 
+Sensor1 = Conteo(pin = 4)
+Sensor1.irq()
 
 
 #-------------------------Loop infinito----------------------------------
-while True:  
-  
-  #Sensor1.pin = 4
-  #Sensor1.contador = 0 
-  #conta = Sensor1.my_callback()
+while True:
+
+  print(Sensor1.contador)
 
 #Función para las ecuaciones del sensor
-  T1 = ecuaciones(conta)
+  # T1 = ecuaciones(conta)
 
   try:
 
 #Empaquetado de datos para publicar en Thingsboard
-    datS1 = datos(T1,lbl)
+    # datS1 = datos(T1,lbl)
 
 #publicación de datos en thingsboard
     print("Publishing data")
-    publish_thingsboard(token, unique_id,datS1)
+    # publish_thingsboard(token, unique_id,datS1)
 
-#Reinicio de variables
-    cnt_boot = 0
-    conta = 0
-    cont = 1
+# #Reinicio de variables
+#     cnt_boot = 0
+#     conta = 0
+#     cont = 1
 
 #reintentar conexión en caso de fallo
   except Exception as inst:
@@ -107,5 +109,3 @@ while True:
       machine.reset()
     time.sleep(1)
   time.sleep(10)
-  
-      
