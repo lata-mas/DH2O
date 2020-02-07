@@ -18,6 +18,10 @@ token = 'Njk5bs2q53mUSXfdvlqc'
 
 #Etiquetas para publicar en thingsboard
 lbl  = 'Litros 1'
+lbl2 = 'Litros 2'
+lbl3 = 'Litros 3'
+lbl4 = 'Litros 4'
+lbl5 = 'Litros 5'
 
 #variables para los intentos de conexión
 cnt_boot = 0
@@ -37,25 +41,64 @@ print ("antes")
 Sensor1 = Conteo(pin = 2) #Pin al que estará asignado el sensor
 Sensor1.irq()
 
+#Declaración del sensor2
+Sensor2 = Conteo(pin = 4) #Pin al que estará asignado el sensor
+Sensor2.irq()
+
+#Declaración del sensor3
+Sensor3 = Conteo(pin = 5) #Pin al que estará asignado el sensor
+Sensor3.irq()
+
+#Declaración del sensor4
+Sensor4 = Conteo(pin = 18) #Pin al que estará asignado el sensor
+Sensor4.irq()
+
+#Declaración del sensor5
+Sensor5 = Conteo(pin = 19) #Pin al que estará asignado el sensor
+Sensor5.irq()
 
 #-------------------------Loop infinito----------------------------------
 while True:
 
 #Función para las ecuaciones del sensor
   T1 = ecuaciones(Sensor1.contador)
+  T2 = ecuaciones(Sensor2.contador)
+  T3 = ecuaciones(Sensor3.contador)
+  T4 = ecuaciones(Sensor4.contador)
+  T5 = ecuaciones(Sensor5.contador)
 
   try:
 
 #Empaquetado de datos para publicar en Thingsboard
     datS1 = datos(T1,lbl)
+    datS2 = datos(T2,lbl2)
+    datS3 = datos(T3,lbl3)
+    datS4 = datos(T4,lbl4)
+    datS5 = datos(T5,lbl5)
 
 #publicación de datos en thingsboard
     print("Publishing data S1")
     publish_thingsboard(token, unique_id,datS1)
 
+    print("Publishing data S2")
+    publish_thingsboard(token, unique_id,datS2)
+
+    print("Publishing data S3")
+    publish_thingsboard(token, unique_id,datS3)
+
+    print("Publishing data S4")
+    publish_thingsboard(token, unique_id,datS4)
+
+    print("Publishing data S5")
+    publish_thingsboard(token, unique_id,datS5)
+
  #Reinicio de variables
     cnt_boot = 0
     Sensor1.contador = 0
+    Sensor2.contador = 0
+    Sensor3.contador = 0
+    Sensor4.contador = 0
+    Sensor5.contador = 0
     cont = 1
 
 #reintentar conexión en caso de fallo
@@ -67,6 +110,10 @@ while True:
     print("Fail {}".format(cnt_boot))
     if cont >1:
         Sensor1.contador = Sensor1.contador
+        Sensor2.contador = Sensor2.contador
+        Sensor3.contador = Sensor3.contador
+        Sensor4.contador = Sensor4.contador
+        Sensor5.contador = Sensor5.contador
     if cnt_boot > 10: #si falla la reconexión mas de diez veces se reinicia el dispositivo
       machine.reset()
     time.sleep(1)
