@@ -51,7 +51,10 @@ while True:
 
 #publicación de datos en thingsboard
     print("Publishing data S1")
-    publish_thingsboard(token, unique_id,datS1)
+    if T1 != 0.0:
+        publish_thingsboard(token, unique_id,datS1)
+    else:
+        print("No hay datos")
 
  #Reinicio de variables
     cnt_boot = 0
