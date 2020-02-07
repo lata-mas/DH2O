@@ -22,6 +22,7 @@ lbl  = 'Litros 1'
 #variables para los intentos de conexión
 cnt_boot = 0
 cont = 0
+conta2 = 0
 
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
@@ -50,15 +51,25 @@ while True:
     datS1 = datos(T1,lbl)
 
 #publicación de datos en thingsboard
-    print("Publishing data S1")
-    if T1 != 0.0:
-        publish_thingsboard(token, unique_id,datS1)
-    else:
-        print("No hay datos")
+
+
+    if Sensor1.inpt.value() == 1:  #entrada ON
+        conta2 = 0
+    else:                          #entrada OFF
+        if T1 != 0:                    #si flujo >0
+            conta2 = conta2 +1
+            if conta2 == 100:               #si contador = 10
+                print("Publicando datos del S1")
+                publish_thingsboard(token, unique_id,datS1)
+                Sensor1.contador = 0
+                conta2 = 0
+            
+
+    print(conta2)
+    
 
  #Reinicio de variables
     cnt_boot = 0
-    Sensor1.contador = 0
     cont = 1
 
 #reintentar conexión en caso de fallo
@@ -73,4 +84,4 @@ while True:
     if cnt_boot > 10: #si falla la reconexión mas de diez veces se reinicia el dispositivo
       machine.reset()
     time.sleep(1)
-  time.sleep(10)
+  time.sleep(0.1)
