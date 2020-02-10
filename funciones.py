@@ -41,9 +41,9 @@ class Conteo:
         if self.T != 0:                    #si flujo >0
             self.con = self.con +1
             if self.con == self.seg*10:               #si contador = 10
-                print("Publicando datos del S1")
+                print("Publicando datos del sensor ",self.label[-1])
                 publish_thingsboard(self.token,self.unique_id,self.data)
                 self.contador = 0
                 self.con = 0
-    print(self.con)
+    print('sensor ',self.label[-1],' = ',self.con)
 #-------------------------------------------------------------------------#
