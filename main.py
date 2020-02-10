@@ -16,9 +16,6 @@ clave = 'acadier2014'      #contraseña de la red
 unique_id = 'fd382bc0-49d5-11ea-9ffe-35550336f914'
 token = 'Njk5bs2q53mUSXfdvlqc'
 
-#Etiquetas para publicar en thingsboard
-lbl  = 'Litros 1'
-
 #variables para los intentos de conexión
 cnt_boot = 0
 cont = 0
@@ -35,7 +32,7 @@ sta_if.connect(red,clave)
 print ("antes")
 
 #Declaración del sensor1
-Sensor1 = Conteo(pin = 2) #Pin al que estará asignado el sensor
+Sensor1 = Conteo(pin = 2 ,label = 'Litros 1') #Pin y etiqueta del sensor
 Sensor1.irq()
 
 
@@ -43,28 +40,24 @@ Sensor1.irq()
 while True:
 
 #Función para las ecuaciones del sensor
-  T1 = ecuaciones(Sensor1.contador)
+  Sensor1.ecuaciones()
 
   try:
 
 #Empaquetado de datos para publicar en Thingsboard
-    datS1 = datos(T1,lbl)
+    Sensor1.datos()
 
 #publicación de datos en thingsboard
-
-
     if Sensor1.inpt.value() == 1:  #entrada ON
         conta2 = 0
     else:                          #entrada OFF
-        if T1 != 0:                    #si flujo >0
+        if Sensor1.T != 0:                    #si flujo >0
             conta2 = conta2 +1
             if conta2 == 100:               #si contador = 10
                 print("Publicando datos del S1")
-                publish_thingsboard(token, unique_id,datS1)
+                publish_thingsboard(token, unique_id,Sensor1.data)
                 Sensor1.contador = 0
                 conta2 = 0
-            
-
     print(conta2)
     
 
