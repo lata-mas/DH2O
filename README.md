@@ -8,9 +8,8 @@ a continuación se explican cada una de las funciones definidas en el archivo "f
 
 ******Clase conteo********
 
-Esta clase es utilizada para realizar el conteo de los pulsos digitales emitidos por el sensor
-y deuelve el conteo en la variable contador.
-La clase se compone de cinco metodos. 
+Esta clase crea un objeto, este objeto será el sensor que se utilizara parala medición del flujo de agua.
+La clase se compone de seis metodos. 
 
 --------Metodo init-------
 El metodo init no es más que para definir la varibale 
@@ -29,3 +28,6 @@ obtener una variable en Litros.
 ------Metodo datos-----------
 Este metodo tan solo sirve para empaquetar los datos junto con una etiqueta para que estén listos
 para ser publicados en Thingsboard.
+
+------Metodo publica----------
+Este metodo se encarga de verificar si hay algún consumo de agua, de serlo así lamacena los datos, en cuanto detecta que ya no lo hay comineza un conteo, el conteo se interrumpe si vuelve a haber consumo, si el conteo concluye, publica los datos en Thingsboard.

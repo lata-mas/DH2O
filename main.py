@@ -1,5 +1,4 @@
 from wifi import do_connect  #importa función para conexión wifi de wifi.py
-from funcion import *        #importar la función para publicar el thingsboard
 from funciones import *      #funciones para hacer el código modular
 
 #importar librerías
@@ -19,7 +18,6 @@ token = 'Njk5bs2q53mUSXfdvlqc'
 #variables para los intentos de conexión
 cnt_boot = 0
 cont = 0
-conta2 = 0
 
 #configuración del network
 sta_if = network.WLAN(network.STA_IF)
@@ -31,8 +29,11 @@ sta_if.connect(red,clave)
 
 print ("antes")
 
+#Segundos entre perona para publicar
+seg = 10
+
 #Declaración del sensor1
-Sensor1 = Conteo(pin = 2 ,label = 'Litros 1') #Pin y etiqueta del sensor
+Sensor1 = Conteo(pin = 2 ,seg = seg,label = 'Litros 1',token = token,unique_id = unique_id) 
 Sensor1.irq()
 
 
@@ -48,19 +49,8 @@ while True:
     Sensor1.datos()
 
 #publicación de datos en thingsboard
-    if Sensor1.inpt.value() == 1:  #entrada ON
-        conta2 = 0
-    else:                          #entrada OFF
-        if Sensor1.T != 0:                    #si flujo >0
-            conta2 = conta2 +1
-            if conta2 == 100:               #si contador = 10
-                print("Publicando datos del S1")
-                publish_thingsboard(token, unique_id,Sensor1.data)
-                Sensor1.contador = 0
-                conta2 = 0
-    print(conta2)
+    Sensor1.publica()
     
-
  #Reinicio de variables
     cnt_boot = 0
     cont = 1
