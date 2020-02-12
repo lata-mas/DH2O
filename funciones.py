@@ -5,7 +5,7 @@ from funcion import *        #importar la función para publicar el thingsboard
 class Conteo:
 
 #Función que inicializa los valores de la clase
-  def __init__(self, pin=0,seg = 0,label='',token='',unique_id=''):
+  def __init__(self,pin=0,seg=0,k=0,label='',token='',unique_id=''):
     self.contador = 0
     self.T = 0
     self.data = 0
@@ -13,6 +13,7 @@ class Conteo:
     self.label = label
     self.token = token
     self.seg = seg
+    self.k = k
     self.unique_id = unique_id
     self.inpt = Pin(pin, Pin.IN)
 
@@ -26,7 +27,7 @@ class Conteo:
 
 #Metodo de constantes del sensor
   def ecuaciones(self):
-      self.T = ((self.contador*1.0)/320)
+      self.T = (self.contador*self.k)
 
 #Metodo que empaqueta los datos para ser publicados en Thingsboard
   def datos(self):

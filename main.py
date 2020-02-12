@@ -33,7 +33,7 @@ print ("antes")
 seg = 10
 
 #Declaración del sensor1
-Sensor1 = Conteo(pin = 2 ,seg = seg,label = 'Litros 1',token = token,unique_id = unique_id) 
+Sensor1 = Conteo(pin=2,seg=seg,k=0.003125,label='Litros 1',token=token,unique_id=unique_id) 
 Sensor1.irq()
 
 
