@@ -1,5 +1,6 @@
 from wifi import do_connect  #importa función para conexión wifi de wifi.py
 from funciones import *      #funciones para hacer el código modular
+from funcion import *
 
 #importar librerías
 import time
@@ -29,27 +30,31 @@ sta_if.connect(red,clave)
 
 print ("antes")
 
+
 #Segundos entre perona para publicar
 seg = 10
 
 #Declaración del sensor1
 Sensor1 = Conteo(pin=2,seg=seg,k=0.003125,label='Litros 1',token=token,unique_id=unique_id) 
 Sensor1.irq()
-
+#Sensor1.atributo()
 
 #-------------------------Loop infinito----------------------------------
 while True:
 
 #Función para las ecuaciones del sensor
   Sensor1.ecuaciones()
-
+  
   try:
 
 #Empaquetado de datos para publicar en Thingsboard
+    Sensor1.atributo()
     Sensor1.datos()
 
 #publicación de datos en thingsboard
     Sensor1.publica()
+
+    #Sensor1.atributo()
     
  #Reinicio de variables
     cnt_boot = 0

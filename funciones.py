@@ -9,6 +9,7 @@ class Conteo:
     self.contador = 0
     self.T = 0
     self.data = 0
+    self.constant = 0
     self.con = 0
     self.label = label
     self.token = token
@@ -43,8 +44,14 @@ class Conteo:
             self.con = self.con +1
             if self.con == self.seg*10:               #si contador = 10
                 print("Publicando datos del sensor ",self.label[-1])
-                publish_thingsboard(self.token,self.unique_id,self.data)
+                publish_thingsboard(self.token,self.unique_id,self.data,'telemetry')
                 self.contador = 0
                 self.con = 0
-    print('sensor ',self.label[-1],' = ',self.con)
+    print('sensor ',self.label[-1],' = ',self.con,' --- ',self.inpt.value())
 #-------------------------------------------------------------------------#
+
+  def atributo(self):
+    self.constant  = {self.label[-1]: 0}
+    self.constant[self.label[-1]] = self.k 
+    publish_thingsboard(self.token,self.unique_id,self.constant,'attributes')
+    print("Constante Sensor ",self.label[-1])
