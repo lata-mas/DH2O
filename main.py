@@ -30,12 +30,14 @@ sta_if.connect(red,clave)
 
 print ("antes")
 
+
 #Segundos entre perona para publicar
 seg = 10
 
 #Declaración del sensor1
 Sensor1 = Conteo(pin=2,seg=seg,k=0.003125,label='Litros 1',token=token,unique_id=unique_id) 
 Sensor1.irq()
+#Sensor1.atributo()
 
 #-------------------------Loop infinito----------------------------------
 while True:
@@ -44,8 +46,14 @@ while True:
   Sensor1.ecuaciones()
   
   try:
+
+#Empaquetado de datos para publicar en Thingsboard
+    #Sensor1.atributo()
+    Sensor1.datos()
+
 #publicación de datos en thingsboard
     Sensor1.publica()
+
     #Sensor1.atributo()
     
  #Reinicio de variables
