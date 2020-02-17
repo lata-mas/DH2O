@@ -6,7 +6,7 @@ def do_connect(red,clave):
         print('connecting to network...')
         sta_if.active(True)
 	sta_if.connect(red,clave)
-        sta_if.connect('IER', 'acadier2014')
+        #sta_if.connect('IER', 'acadier2014')
         while not sta_if.isconnected():
             pass
     else:
