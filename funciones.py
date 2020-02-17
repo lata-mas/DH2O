@@ -1,5 +1,19 @@
-from machine import Pin      #libreria para utilizar los GPIO's de la esp
-from funcion import *        #importar la función para publicar el thingsboard
+from machine import Pin       #libreria para utilizar los GPIO's de la esp
+from funcion import *         #importar la función para publicar el thingsboard
+from wifi import do_connect   #importa función para conexión wifi de wifi.py
+import time
+
+#Datos de la red de internet
+red = 'IER'                #Red de internet
+clave = 'acadier2014'      #contraseña de la red
+
+class Esp:
+
+  def __init__(self,red='',clave='',token='',unique_id=''):
+    self.red = red
+    self.clave = clave
+    self.token = token
+    self.unique_id = unique_id
 
 #---------------Clase para el conteo digital del pin-----------------#
 class Conteo:
@@ -16,6 +30,8 @@ class Conteo:
     self.seg = seg
     self.k = k
     self.estado_anterior = 0
+    self.contat = 0
+    self.contboot = 0
     self.unique_id = unique_id
     self.inpt = Pin(pin, Pin.IN)
 
@@ -50,10 +66,24 @@ class Conteo:
                 self.con = 0
     print('sensor ',self.label[-1],' /conteo= ',self.con,' /estado= ',self.inpt.value(),' /consumo= ',self.T)
     self.estado_anterior = self.inpt.value()
-#-------------------------------------------------------------------------#
 
+#Metodo para publicar la constante del sensor, lo intenta 10 veces
   def atributo(self):
     self.constant  = {self.label[-1]: 0}
     self.constant[self.label[-1]] = self.k 
-    publish_thingsboard(self.token,self.unique_id,self.constant,'attributes')
-    print("Constante Sensor ",self.label[-1])
+    while self.contat == 0:
+      try:
+        publish_thingsboard(self.token,self.unique_id,self.constant,'attributes')
+        print("Constante Sensor ",self.label[-1])
+        self.contat = 1
+      except Exception as inst:
+        print(inst)
+        do_connect(red,clave);
+        self.contboot += 1
+        print("Fail {}".format(self.contboot))
+        if self.contboot > 10: 
+          machine.reset()
+        time.sleep(1)
+      time.sleep(1)
+#-------------------------------------------------------------------------#
+
