@@ -8,16 +8,6 @@ import time
 #import sys                 ++++++++++++
 
 
-#-------------Datos del dispositivo----------------------#
-#Datos de la red de internet
-#red = 'IER'                #Red de internet
-#clave = 'acadier2014'      #contraseña de la red
-
-#credenciales del dispositivo configurado en thingsboard
-unique_id = 'fd382bc0-49d5-11ea-9ffe-35550336f914'
-token = 'Njk5bs2q53mUSXfdvlqc'
-#-------------------------------------------------------#
-
 #variables para los intentos de conexión
 cnt_boot = 0
 cont = 0
@@ -37,23 +27,16 @@ print ("antes")
 seg = 10
 
 #Declaración del sensor1
-Sensor1 = Conteo(pin=2,seg=seg,k=0.003125,label='Litros 1',token=token,unique_id=unique_id) 
-Sensor1.irq()
+Sensor1 = Conteo(pin=2,seg=seg,k=0.003125,label='Litros 1') 
 
 #Metodo que publica la constante del sensor
 Sensor1.atributo()  
-
+ 
 #-------------------------Loop infinito----------------------------------
 while True:
-
-#Función para las ecuaciones del sensor
-  Sensor1.ecuaciones()
   
   try:
-
-#Empaquetado de datos para publicar en Thingsboard
-    Sensor1.datos()
-
+   
 #publicación de datos en thingsboard
     Sensor1.publica()
     
@@ -74,3 +57,4 @@ while True:
       machine.reset()
     time.sleep(1)
   time.sleep(0.1)
+#------------------------------------------------------------------------
