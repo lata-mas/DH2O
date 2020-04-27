@@ -6,8 +6,10 @@ import time
 
 #-------------Datos del dispositivo----------------------#
 #Datos de la red de internet
-red = 'IER'                #Red de internet
-clave = 'acadier2014'      #contraseña de la red
+red = 'INFINITUMjpdm'                #Red de internet
+clave = '5cbbb04d21'      #contraseña de la red
+#red = 'IER'                #Red de internet
+#clave = 'acadier2014'      #contraseña de la red
 
 #credenciales del dispositivo configurado en thingsboard
 unique_id = 'fd382bc0-49d5-11ea-9ffe-35550336f914'
