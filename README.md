@@ -31,4 +31,5 @@ para ser publicados en Thingsboard.
 
 ------Metodo publica----------
 Este metodo se encarga de verificar si hay algún consumo de agua, de serlo así lamacena los datos, en cuanto detecta que ya no lo hay comineza un conteo, el conteo se interrumpe si vuelve a haber consumo, si el conteo concluye, publica los datos en Thingsboard.
-https://github.com/AltamarMx/SensorH2O/issues/2
+
+LOGO-H2O: https://github.com/AltamarMx/SensorH2O/issues/2
