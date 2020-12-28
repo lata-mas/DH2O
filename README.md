@@ -1,5 +1,5 @@
 # SensorH2O
-Repositorio para el proyecto de los sensores de flujo de agua para el nuevo edificio
+Repositorio para el proyecto de los sensores de flujo de agua para el nuevo edificio y que ser'a actualizado por Miguel Angel
 
 Esta versión del proyecto se conforma de un código modular para facilitar la manipulación de ciertos parametros que nos ayuden
 a monitorear el flujo de agua en una toma.
