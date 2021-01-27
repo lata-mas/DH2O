@@ -100,15 +100,15 @@ El repositorio de todo el proyecto se encuentra en Github, para esta versión de
 
 ![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/LogoGithubB.jpg?raw=true)
 
-https://github.com/jwilliamsee/H2O-PRUEBA-JW
+https://github.com/AltamarMx/SensorH2O
 
 ### 4.3 Información de la web
 
-La página de presentación del proyecto, por el momento está en la sección de Github llamada Wiki, para una versión de prueba del formato de documentación de manera más amigable con el usuario que desea agregar información.
+La página de presentación del proyecto, está en la sección de Github.
 
 El sitio web del formato estándar para documentar es el siguiente:
 
-https://github.com/jwilliamsee/H2O-PRUEBA-JW/wiki
+https://github.com/AltamarMx/SensorH2O/blob/master/README.md
 
 ### 4.4 Propiedades descriptivas
 
@@ -139,7 +139,7 @@ https://github.com/jwilliamsee/H2O-PRUEBA-JW/wiki
 Son recomendaciones para operar el dispositivo H2O, pueden existir más, pero eso depende del usuario, pueden surgirle diferentes dudas, a unos más que a otros.
 En este link hay algunos que pueden ayudar:
 
-https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Manuales/ErroresAndSoluciones.md
+[ErroresYsoluciones](https://github.com/AltamarMx/SensorH2O/blob/master/Manuales/ErroresAndSoluciones.md)
 
 ### 4.5.6 Contacto primario
 
@@ -198,7 +198,7 @@ https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Manuales/ErroresAndSoluci
 
 Representación gráfica del dispositivo H2O
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/LOGO-H2O.png?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/LOGO-H2O.png?raw=true)
 
 ### 4.5.8 Etapa de desarrollo
 
@@ -217,13 +217,12 @@ La réplica del dispositivo usando la estructura aquí mostrada y siguiendo la d
 El estándar de documentación completo, no se ha seguido, pero si se ha usado el estándar para esta documentación de Open Know-How, algunos puntos se han omitido porque al no ser la estructura para documentar proyectos electrónicos, existen puntos que salen sobrando o que definitivamente no aplican para este tipo de proyectos.
 El link del estándar usado es el siguiente:
 
-https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/src/branch/master/1#a40dfa47-8bff-4e28-9338-3f808ddfe6ae
+[EstandarOpenKnowHow](https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/src/branch/master/1#a40dfa47-8bff-4e28-9338-3f808ddfe6ae)
 
 ### 4.6 Documentación
 
 ### 4.6.1 Punto de entrada de la documentación:
 
-https://github.com/jwilliamsee/H2O-PRUEBA-JW
 
 ### Carpeta [CAD](https://github.com/jwilliamsee/H2O-PRUEBA-JW/tree/main/CAD)
 
