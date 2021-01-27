@@ -95,12 +95,11 @@ En algunas secciones de la documentación es necesario nombrar o hacer referenci
 
 #### 4.2.4 Ubicación del repositorio
 
-El repositorio de todo el proyecto se encuentra en Github, para esta versión de prueba y antes de ser almacenado en el repositorio original, las diferentes carpetas y archivos están alojadas en un un solo repositorio, no existe una carpeta raíz, pero sí existe una dirección raíz y es la siguiente:
-**Esta dirección web cambiará cuando los archivos pasen al repositorio original.**
+El repositorio de todo el proyecto se encuentra en Github, las diferentes carpetas y archivos están alojadas en un un solo repositorio, no existe una carpeta raíz, pero sí existe una dirección raíz y es la siguiente:
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/LogoGithubB.jpg?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/LogoGithubB.jpg?raw=true)
 
-https://github.com/AltamarMx/SensorH2O
+[SensorH2O](https://github.com/AltamarMx/SensorH2O)
 
 ### 4.3 Información de la web
 
@@ -108,7 +107,7 @@ La página de presentación del proyecto, está en la sección de Github.
 
 El sitio web del formato estándar para documentar es el siguiente:
 
-https://github.com/AltamarMx/SensorH2O/blob/master/README.md
+[README](https://github.com/AltamarMx/SensorH2O/blob/master/README.md)
 
 ### 4.4 Propiedades descriptivas
 
