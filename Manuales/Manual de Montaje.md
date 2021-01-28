@@ -1,4 +1,4 @@
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/logoIER.png?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/logoIER.png?raw=true)
 
 
 ### Universidad Nacional Autónoma de México
@@ -67,18 +67,18 @@ Verificar que se tienen todos los componentes para realizar el ensamble e identi
 ------------
 **5. Materiales del dispositivo**
 
-[Ver lista de materiales del dispositivo](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Materiales/Lista_de_materiales_H2O.md "Ver lista de materiales del dispositivo")
+[Ver lista de materiales del dispositivo](https://github.com/AltamarMx/SensorH2O/blob/master/Materiales/Lista_de_materiales_H2O.md)
 
 *Pág. 4*
 
 ------------
 **6. Placa principal**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/vistasuperiorpcb.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/vistasuperiorpcb.PNG?raw=true)
 
 **PCB Vista superior**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/vistainferiorpcb.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/vistainferiorpcb.PNG?raw=true)
 
 **PCB Vista inferior**
 
@@ -89,11 +89,11 @@ Se recomienda poner un componente a la vez en la placa para poder soldarlo cómo
 ------------
 **7. Identificación de componentes en la placa**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/IdentificacionDeComponentesB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/IdentificacionDeComponentesB.PNG?raw=true)
 
 **Componentes**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/ComponentesEnPCBB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ComponentesEnPCBB.PNG?raw=true)
 
 **Componentes en PCB**
 
@@ -102,7 +102,7 @@ Se recomienda poner un componente a la vez en la placa para poder soldarlo cómo
 ------------
 **8. Tabla de componentes**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/TablaDeComponentesB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ComponentesEnPCBB.PNG?raw=true)
 
 **9. Montaje de componentes**
 
@@ -112,7 +112,7 @@ En caso de requerir orientación del dispositivo para colocarlo en la placa o te
 *Pág. 7*
 
 ------------
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/ImagenCorteDePinesB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ImagenCorteDePinesB.PNG?raw=true)
 
 **Soldar las piezas de manera individual**
 
@@ -121,7 +121,7 @@ En caso de requerir orientación del dispositivo para colocarlo en la placa o te
 Son un total de 14 resistencias de 3 valores diferentes, 220Ω, 1k y 2k. Las resistencias no tienen polaridad, por lo que la orientación en la placa realmente no influye en el buen funcionamiento. Si se desconoce los valores de las resistencias representadas en la placa al momento de querer interpretar con los colores, es necesario que consulte el código de colores para asegurarse de que se está usando la resistencia adecuada en el lugar correspondiente.
 Los primeros componentes a soldar, se recomienda que sean las resistencias porque son componentes pequeños y si se empieza por los mas grandes es seguro que sea difícil soldar las resistencias por los espacios.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/ResistenciasDeParteSuperiorB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ResistenciasDeParteSuperiorB.PNG?raw=true)
 
 **Resistencias de la parte superior**
 
@@ -129,11 +129,11 @@ Los primeros componentes a soldar, se recomienda que sean las resistencias porqu
 
 ------------
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/ResistenciasParteCentralB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ResistenciasParteCentralB.PNG?raw=true)
 
 **Resistencias parte central**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/ResistenciasParteInferiorB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ResistenciasParteInferiorB.PNG?raw=true)
 
 **Resistencias parte inferior**
 
@@ -141,7 +141,7 @@ Los primeros componentes a soldar, se recomienda que sean las resistencias porqu
 
 El integrado LM324, tiene una orientación, se puede ver la hoja de datos en caso de ser necesario, pero para el caso en particular de los LM324 se recomienda primero soldar una patilla o pin para darle seguridad y manipular cómodamente para soldar los pines restantes.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/OrientacionLM324B.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/OrientacionLM324B.PNG?raw=true)
 
 **Orientación del LM324**
 
@@ -153,7 +153,7 @@ El integrado LM324, tiene una orientación, se puede ver la hoja de datos en cas
 Los conectores TBLOCK-M3 se deben conectar con las terminales de frente, la parte metálica hacía nosotros o hacía los límites de la placa, con los orificios de conexión libres para realizar el aseguramiento de los cables de los sensores.
 Los conectores TBLOCK-M3 no tienen polaridad, por lo que no es necesario ver diagramas o cualquier otra información, pero es importante que los terminales de conexión vayan de frente.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/TBLOCK-M3B.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/TBLOCK-M3B.PNG?raw=true)
 
 **Orientación de los TBLOCK-M3 en la placa**
 
@@ -161,7 +161,7 @@ Los conectores TBLOCK-M3 no tienen polaridad, por lo que no es necesario ver dia
 
 Para posicionar el ESP en la placa, se recomienda soldar de inicio solo un pin y después los demás, con la intención de manipular la placa cómodamente, para hacer el proceso de soldado de este componente en particular es necesario contar con una base para el ESP y no tener que soldar los pines directamente de la placa, en caso de tener dudas sobre su operación o alguna característica en particular deberá usar la hoja de datos, almacenada en la carpeta.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/ImagenESPEnPlacaB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ImagenESPEnPlacaB.PNG?raw=true)
 
 *Pág. 10*
 
@@ -170,13 +170,13 @@ Para posicionar el ESP en la placa, se recomienda soldar de inicio solo un pin y
 
 El conector hembra USB es para alimentar con una fuente externa a la placa en general, será por ese conector donde entre la energía eléctrica para alimentar a todos los componentes, la alimentación será con un cable USB tipo A-A.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/USBCONN.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/USBCONN.PNG?raw=true)
 
 **10. Corte de pines**
 
 Cuando se ha realizado el proceso de soldar todas las piezas, por el otro lado de la placa tendrá los pines muy largos y si se deja así, causaría muchos problemas, se cortará el excedente cuidando que la soldadura aplicada no se dañe, de preferencia se debe dejar el pin de 1 o 2 mm después de la soldadura aplicada.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/PinesCortadosB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/PinesCortadosB.PNG?raw=true)
 
 **Pines cortados**
 
@@ -185,22 +185,22 @@ Cuando se ha realizado el proceso de soldar todas las piezas, por el otro lado d
 ------------
 **11. Conexión de los sensores**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/SensoresIzquierdosB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/SensoresIzquierdosB.PNG?raw=true)
 
 **Conexiones de sensores lateral izquierda**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/SensoresDerechosB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/SensoresDerechosB.PNG?raw=true)
 
 **Conexión de sensores lateral derecha**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/SensoresFrontalesB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/SensoresFrontalesB.PNG?raw=true)
 
 **Conexión de sensores frontales**
 
 *Pág. 12*
 
 ------------
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/PlacaWithComponetesB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/PlacaWithComponetesB.PNG?raw=true)
 
 **Placa con componentes montados**
 
@@ -214,7 +214,7 @@ Debe asegurarse, de usar los cables adecuados, que no se encuentren en mal estad
 ------------
 led azul debe parpadear, sólo una vez, eso indica que se ha conectado bien y que nuestro cable está en buenas condiciones.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/PruebaDeEncendidoB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/PruebaDeEncendidoB.PNG?raw=true)
 
 **Prueba de encendido**
 
@@ -227,7 +227,7 @@ al energizar del ESP debe realizarse por separado, es decir, independiente de la
 En caso de hacer prueba completa con todos los componentes montados y los sensores conectados, será conveniente que se conecte por jumper a la base, pero sin energizar el ESP, debido a que está conectado a la computadora.
 Para prueba completa sin montar el ESP con conexión por jumper y al mismo tiempo energizar la placa y conectar los sensores se puede guiar de la figura.
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/FormaCorrectaIncorrectaB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/FormaCorrectaIncorrectaB.PNG?raw=true)
 
 **Forma incorrecta...................................Forma correcta**
 
@@ -236,20 +236,20 @@ Para prueba completa sin montar el ESP con conexión por jumper y al mismo tiemp
 ------------
 **13. Base de la carcasa**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/BaseDeCarcasaPCB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/BaseDeCarcasaPCB.PNG?raw=true)
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/BaseDeCarcasaTornillos.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/BaseDeCarcasaTornillos.PNG?raw=true)
 
 *Pág. 15*
 
 ------------
 **14. Partes ensamble completo**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/Partes%20EsambleCompletoB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/Partes%20EsambleCompletoB.PNG?raw=true)
 
 **15. Vista del ensamble completo**
 
-![](https://github.com/jwilliamsee/H2O-PRUEBA-JW/blob/main/Imagenes/VistaEnsambleCompletoB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/VistaEnsambleCompletoB.PNG?raw=true)
 
 *Pág. 16*
 
