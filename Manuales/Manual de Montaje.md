@@ -102,7 +102,7 @@ Se recomienda poner un componente a la vez en la placa para poder soldarlo cómo
 ------------
 **8. Tabla de componentes**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ComponentesEnPCBB.PNG?raw=true)
+![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/TablaDeComponentesB.PNGe)
 
 **9. Montaje de componentes**
 
