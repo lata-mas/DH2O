@@ -232,6 +232,8 @@ Una vez dentro del link, están los pasos para poder “limpiar” o “formatea
 
 ![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/InstallSptollB.PNG?raw=true)
 
+En caso de no poder usar ese comando, se puede sustituir con: "sudo apt install esptool"
+
 El comando anterior permite cargar herramientas que proporcionan acceso a muchas de las funciones de señal.
 
 5. Para conocer en qué puerto está conectado nuestro ESP debemos escribir el siguiente comando en la terminal.
