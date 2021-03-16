@@ -266,6 +266,17 @@ En esta carpeta está el código para 8 sensores de agua, complemento de los otr
 
 En este archivo se encuentra en forma de lista los documentos que el dispositivo H2O debe tener para su correcta operación.
 
+### Thingsboard
+
+Dashboard del dispositivo H2O en la plataforma de Thingsboard:
+
+Miguel_H2O
+
+Las credenciales para tener acceso se deberán solicitar con alguno de los doctores.
+
+La web (Dashboard) se encuantra aquí:
+
+[**Miguel_H2O**](http://iot.ier.unam.mx:8080/dashboard/5825dc60-059e-11eb-9c3f-d1ead9980bc3?publicId=0e7066c0-6e70-11e8-b1f3-991d62d050bd)
 
 ------------
 
