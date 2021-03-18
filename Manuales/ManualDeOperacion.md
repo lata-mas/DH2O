@@ -2,7 +2,7 @@
 
 ## Universidad Nacional Autónoma de México
 ### Instituto de Energías Renovables
-###Manual de operación
+### Manual de operación
 ## Dispositivo medidor de caudal (H2O)
 
 ------------
@@ -258,6 +258,19 @@ Para formatear la tarjeta completamente es necesario tener conectado el ESP y se
 
 ![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/erase_flash_portB.PNG?raw=true)
 
+**NOTA:** En ocasiones se presenta un detalle de error despuès de ejecutar el comando el comando anterior, esto sucede porque en algunas placas genèricas es
+          necesario entrar al modo "FLASH", lo anterior se logra de la siguiente manera:
+	  
+	Paso 1: Escribir en la terminal el comando para flashear la tarjeta, el comando mostrado arriba pero sin ejecutarlo.
+	
+	Paso 2: Sin ejecutar el comando, se debe desconectar el cable de datos del ESP.
+	
+	Paso 3: Presionar el botòn del ESP llamado "FLASH", mantener presionado.
+	
+	Paso 4: Sin dejar de presionar, se deberà conectar el cable de datos al ESP, presionando en todo momento.
+	
+	Paso 5: Aùn presionando el botòn y el cable conectado, debera`ejecutar la lìnea de comando previamente preparada en la terminal, en cuanto ejecute el 			comando debe dejar de presionar el botòn y si realizò bien el procedimiento no habrà error y se llevarà a cabo el proceso satisfactoriamente.
+	
 Lo anterior es para “limpiar” el esp8266, posterior a eso, se procede a abrir la terminal de nuestro equipo y se deberá tener conectado el ESP8266 al equipo.
 
 7. Se deberá escribir en la terminal lo siguiente:
