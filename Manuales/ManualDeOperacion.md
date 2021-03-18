@@ -269,7 +269,8 @@ Para formatear la tarjeta completamente es necesario tener conectado el ESP y se
 	
 	Paso 4: Sin dejar de presionar, se deberà conectar el cable de datos al ESP, presionando en todo momento.
 	
-	Paso 5: Aùn presionando el botòn y el cable conectado, debera`ejecutar la lìnea de comando previamente preparada en la terminal, en cuanto ejecute el 			comando debe dejar de presionar el botòn y si realizò bien el procedimiento no habrà error y se llevarà a cabo el proceso satisfactoriamente.
+	Paso 5: Aùn presionando el botòn y el cable conectado, debera`ejecutar la lìnea de comando previamente preparada en la terminal, en cuanto ejecute el 
+		comando debe dejar de presionar el botòn y si realizò bien el procedimiento no habrà error y se llevarà a cabo el proceso satisfactoriamente.
 	
 Lo anterior es para “limpiar” el esp8266, posterior a eso, se procede a abrir la terminal de nuestro equipo y se deberá tener conectado el ESP8266 al equipo.
 
