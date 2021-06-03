@@ -1,4 +1,4 @@
-# Dispositivo medidor de caudal (H2O)
+# Dispositivo medidor de caudal (H2O) con 5 sensores
 # 1.0 Introducción
 
 El futuro de la humanidad y del planeta dependen de la manera en la que produzcamos energía: un sistema energético fiable, asequible y descarbonizado es fundamental.
