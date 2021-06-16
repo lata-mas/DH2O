@@ -15,4 +15,4 @@
 
 	El repositorio que está en la plataforma de GitHub, aunque cuenta con lo necesario para que el prototipo de medición de flujo de agua funcione, puede someterse a algunas mejoras.
 
-5.	Almacenar dentro de carpetas los archivos necesarios para 1,2,3….8 sensores disponibles por dispositivo al momento de descargarlos para trabajar mejor. 
+5.	Considerar que la imagen de arriba es sólo para prueba, realmente no debe ponerse a esas distancias en cuanto a los codos se refiere, porque hay pérdidas de presión y velocidad que termina por afectar el flujo, de preferencia que sea a 30cm de distancia de cualquier accesorio. 

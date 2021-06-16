@@ -74,11 +74,11 @@ Verificar que se tienen todos los componentes para realizar el ensamble e identi
 ------------
 **6. Placa principal**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/vistasuperiorpcb.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/PCB3DEASYH2O1FRONTAL.PNG?raw=true)
 
 **PCB Vista superior**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/vistainferiorpcb.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/PCBEASYH2O13DABAJO.PNG?raw=true)
 
 **PCB Vista inferior**
 
@@ -89,11 +89,11 @@ Se recomienda poner un componente a la vez en la placa para poder soldarlo cómo
 ------------
 **7. Identificación de componentes en la placa**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/IdentificacionDeComponentesB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/globoscomponentes.PNG?raw=true)
 
 **Componentes**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ComponentesEnPCBB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/IDENTIFICACIONCOMPH2O1.PNG?raw=true)
 
 **Componentes en PCB**
 
@@ -102,7 +102,7 @@ Se recomienda poner un componente a la vez en la placa para poder soldarlo cómo
 ------------
 **8. Tabla de componentes**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/TablaDeComponentesB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/TABLACOMPONENTES.PNG?raw=true)
 
 **9. Montaje de componentes**
 
@@ -129,19 +129,15 @@ Los primeros componentes a soldar, se recomienda que sean las resistencias porqu
 
 ------------
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ResistenciasParteCentralB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/RPARTECENTRAL.PNG?raw=true)
 
-**Resistencias parte central**
-
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ResistenciasParteInferiorB.PNG?raw=true)
-
-**Resistencias parte inferior**
+**Resistencia parte central**
 
 **9.2 Circuito integrado LM324**
 
 El integrado LM324, tiene una orientación, se puede ver la hoja de datos en caso de ser necesario, pero para el caso en particular de los LM324 se recomienda primero soldar una patilla o pin para darle seguridad y manipular cómodamente para soldar los pines restantes.
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/OrientacionLM324B.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/LM324ENPLACA.PNG?raw=true)
 
 **Orientación del LM324**
 
@@ -153,7 +149,7 @@ El integrado LM324, tiene una orientación, se puede ver la hoja de datos en cas
 Los conectores TBLOCK-M3 se deben conectar con las terminales de frente, la parte metálica hacía nosotros o hacía los límites de la placa, con los orificios de conexión libres para realizar el aseguramiento de los cables de los sensores.
 Los conectores TBLOCK-M3 no tienen polaridad, por lo que no es necesario ver diagramas o cualquier otra información, pero es importante que los terminales de conexión vayan de frente.
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/TBLOCK-M3B.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/TBLOCKENPLACA.PNG?raw=true)
 
 **Orientación de los TBLOCK-M3 en la placa**
 
@@ -161,7 +157,7 @@ Los conectores TBLOCK-M3 no tienen polaridad, por lo que no es necesario ver dia
 
 Para posicionar el ESP en la placa, se recomienda soldar de inicio solo un pin y después los demás, con la intención de manipular la placa cómodamente, para hacer el proceso de soldado de este componente en particular es necesario contar con una base para el ESP y no tener que soldar los pines directamente de la placa, en caso de tener dudas sobre su operación o alguna característica en particular deberá usar la hoja de datos, almacenada en la carpeta.
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/ImagenESPEnPlacaB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/ESPENPLACA.PNG?raw=true)
 
 *Pág. 10*
 
@@ -176,31 +172,25 @@ El conector hembra USB es para alimentar con una fuente externa a la placa en ge
 
 Cuando se ha realizado el proceso de soldar todas las piezas, por el otro lado de la placa tendrá los pines muy largos y si se deja así, causaría muchos problemas, se cortará el excedente cuidando que la soldadura aplicada no se dañe, de preferencia se debe dejar el pin de 1 o 2 mm después de la soldadura aplicada.
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/PinesCortadosB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/PINESCUTPLACA.PNG?raw=true)
+
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/PINESCUTPLACA1.PNG?raw=true)
 
 **Pines cortados**
 
 *pág. 11*
 
 ------------
-**11. Conexión de los sensores**
+**11. Conexión del sensor**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/SensoresIzquierdosB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/SENSORENPLACA.PNG?raw=true)
 
-**Conexiones de sensores lateral izquierda**
-
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/SensoresDerechosB.PNG?raw=true)
-
-**Conexión de sensores lateral derecha**
-
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/SensoresFrontalesB.PNG?raw=true)
-
-**Conexión de sensores frontales**
+**Conexión de sensor**
 
 *Pág. 12*
 
 ------------
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/PlacaWithComponetesB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/COMPONENTESENPLACACOMPLETA.PNG?raw=true)
 
 **Placa con componentes montados**
 
@@ -227,29 +217,29 @@ al energizar del ESP debe realizarse por separado, es decir, independiente de la
 En caso de hacer prueba completa con todos los componentes montados y los sensores conectados, será conveniente que se conecte por jumper a la base, pero sin energizar el ESP, debido a que está conectado a la computadora.
 Para prueba completa sin montar el ESP con conexión por jumper y al mismo tiempo energizar la placa y conectar los sensores se puede guiar de la figura.
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/FormaCorrectaIncorrectaB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/CORRECTOINCORRECTO.PNG?raw=true)
 
-**Forma incorrecta...................................Forma correcta**
+**Forma incorrecta...........................................Forma correcta**
 
 *Pág 14*
 
 ------------
 **13. Base de la carcasa**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/BaseDeCarcasaPCB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/BASEYPLACA1.PNG?raw=true)
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/BaseDeCarcasaTornillos.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/BASEYPLACA.PNG?raw=true)
 
 *Pág. 15*
 
 ------------
 **14. Partes ensamble completo**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/Partes%20EsambleCompletoB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/ENSAMBLEFINAL.PNG?raw=true)
 
 **15. Vista del ensamble completo**
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/VistaEnsambleCompletoB.PNG?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/SENSORCONECTADO.PNG?raw=true)
 
 *Pág. 16*
 
@@ -260,7 +250,7 @@ Para prueba completa sin montar el ESP con conexión por jumper y al mismo tiemp
 - Deberá manipularse en lugar seco, libre de cualquier recipiente con líquido, cuando se realicen pruebas deberá manejarse con mucho cuidado.
 - La carcasa tiene orificios para la circulación de aire al interior evitando que la placa se caliente, aunque es difícil que llegue a calentarse.
 - Deberá ponerse en un lugar protegido de la lluvia y el sol para evitar cualquier daño causado por el ambiente.
-- La conexión de los sensores con los conectores TBLOCK-M3 deberá realizarse con cable resistente y de buen grosor para evitar cambiarlos repetidamente y pueda manipularlos cómodamente.
+- La conexión del sensor con el conector TBLOCK-M3 deberá realizarse con cable resistente y de buen grosor para evitar cambiarlos repetidamente y pueda manipularlos cómodamente.
 
 *Pág. 17*
 

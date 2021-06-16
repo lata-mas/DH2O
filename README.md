@@ -1,4 +1,4 @@
-# Dispositivo medidor de caudal (H2O) con un sensor de Agua por ESP
+# SensorH2O1
 # 1.0 Introducción
 
 El futuro de la humanidad y del planeta dependen de la manera en la que produzcamos energía: un sistema energético fiable, asequible y descarbonizado es fundamental.
@@ -197,7 +197,7 @@ En este link hay algunos que pueden ayudar:
 
 Representación gráfica del dispositivo H2O
 
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/LOGO-H2O.png?raw=true)
+![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/PORTADAH2O1.PNG?raw=true)
 
 ### 4.5.8 Etapa de desarrollo
 
@@ -205,7 +205,7 @@ La etapa en la que se encuentra el desarrollo del dispositivo H2O, es la de docu
 
 ### 4.5.9 Fue hecho físicamente
 
-El dispositivo sí se ha hecho de forma práctica, es decir, se ha llevado a la práctica para comprobar el funcionamiento del mismo, solo como pruebas de funcionamiento, el dispositivo completo y funcionando durante largos períodos de tiempo no se ha realizado, falta montarlo completo, que mida hasta en 8 conexiones de agua y con su respectiva carcasa de protección.
+El dispositivo sí se ha hecho de forma práctica, es decir, se ha llevado a la práctica para comprobar el funcionamiento del mismo, solo como pruebas de funcionamiento, el dispositivo completo y funcionando durante largos períodos de tiempo no se ha realizado, falta montarlo completo, que mida 1 conexión de agua y con su respectiva carcasa de protección.
 
 ### 4.5.10 Se ha comprobado la documentación
 
@@ -236,7 +236,7 @@ También se encuentra el esquemático en PDF.
 
 Se encuentran el dieño de PCB en .json, para editarlo es necesario abrirlo con el software EasyEDA, primero descargarlo y después abrirlo desde el software.
 
-Para la representación gráfica de los componentes del dispositivo y conexión de los sensores, se encuentran los archivos con extensión .fzz, son los esquemas de conexión realizados en el software Open source Fritzing para conexión de 1 sensor y otro de 8 sensores.
+Para la representación gráfica de los componentes del dispositivo y conexión de los sensores, se encuentran los archivos con extensión .fzz, son los esquemas de conexión realizados en el software Open source Fritzing para conexión de 1 sensor.
 
 En la carpeta también se encuentra un archivo .zip con lo necesario para maquinar el pcb.
 
@@ -260,7 +260,7 @@ En la carpeta "Materiales" se encuentran dos archivos con extensión md y otros 
 
 ### Carpeta [SRC](https://github.com/AltamarMx/SensorH2O/tree/master/SRC)
 
-En esta carpeta está el código para 8 sensores de agua, complemento de los otros códigos necesarios del dispositivo, hay un main1S que ese es el código para probar un sensor, el main8, es el código para 8 sensores, el caso que sea, deberá cargar uno de ellos y los otros para el funcionamiento adecuado, para operar el dispositivo son 8 códigos de los 6 que están en la carpeta.
+En esta carpeta está el código para 1 sensor de agua, complemento de los otros códigos necesarios del dispositivo, hay un main1S que ese es el código para probar un sensor, deberá cargar el código sin el 1 al final del nombre, es decir, será "main.py" en lugar de "main1S.py" y los otros para el funcionamiento adecuado, para operar el dispositivo son 5 códigos de los que están en la carpeta.
 
 ### Archivo [ChecklistH2O](https://github.com/AltamarMx/SensorH2O/blob/master/ChecklistH2O.md)
 
@@ -299,5 +299,3 @@ https://dillinger.io/
 
 [6] M Editor.md
 https://pandao.github.io/editor.md/en.html
-
-
