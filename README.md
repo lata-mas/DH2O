@@ -250,7 +250,7 @@ La etapa en la que se encuentra el desarrollo del dispositivo H2O, es la de docu
 
 ------------
 
-## CHECK-LIST de lo que debe tener el dispositivo
+#### CHECK-LIST de lo que debe tener el dispositivo
 - [x] Lista de costos
 - [x] SRC completos
 - [x] Pictograma de conexión
