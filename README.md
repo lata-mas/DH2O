@@ -274,7 +274,7 @@ Miguel_H2O
 
 Las credenciales para tener acceso se deberán solicitar con alguno de los doctores.
 
-La web (Dashboard) se encuantra aquí:
+La web (Dashboard) se encuentra aquí:
 
 [**Miguel_H2O**](http://iot.ier.unam.mx:8080/dashboard/5825dc60-059e-11eb-9c3f-d1ead9980bc3?publicId=0e7066c0-6e70-11e8-b1f3-991d62d050bd)
 
