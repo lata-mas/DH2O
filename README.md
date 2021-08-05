@@ -201,52 +201,40 @@ Representación gráfica del dispositivo H2O
 
 ### 4.5.8 Etapa de desarrollo
 
-La etapa en la que se encuentra el desarrollo del dispositivo H2O, es la de documentación, se espera que sea la penúltima etapa, para poder ser replicado de forma eficiente y eficaz.
+La etapa en la que se encuentra el desarrollo del dispositivo H2O es la de documentación final, realmente el H2O ya funciona bien, según lo establecido pero, falta complementar con la carcasa, la prueba con la placa diseñada y la información final.
+
+**El porcentaje de avance en las actividades corresponde a 10% como valor máximo para cada una, para llegar a un total del 100%.**
 
 #### Seguimiento de actividades del dispositivo H2O
 
 |**Actividad**|**Tiempo estimado de ejecución**|**% de avance**|**Pendientes**|**Notas**   |
 | :------------: | :------------: | :------------: | :------------: | :------------: |
-|**1.**| |   |   |   |
+|**1. Revisión de documentos existentes necesarios para operarlo de acuerdo a la CHECK-LIST**|1-2 horas|10%|   |   |
 |   |   |   |   |   |
-|**2.**|   |   |   |   |
+|**2. Verificar si cuenta con los materiales requeridos**|30 minutos|5%|Falta maquinar una placa y la impresión de la carcasa|   |
+|componentes electrónicos|carcasa del H2O|herramientas electrónicas|Jumper's y cables para coneión|   |
 |   |   |   |   |   |
-|**3.**|   |   |   |   |
+|**3. Leer el manual de operación para entender lo que se hará**|30 minutos|10%|   |   |
 |   |   |   |   |   |
-|**4.**|   |   |   |   |
+|**4. Ver los diagramas de conexión**|30 minutos|10%|   |   |
 |   |   |   |   |   |
-|**5.**|   |   |   |   |
+|**5. Conectar el ESP a la computadora con las conexiones correspondientes del diagrama y configurar de acuerdo al manual de operación**|30 minutos|%10|   |Lo anterior si ya se tiene todo listo, pero si no, puede llevarse hasta 1 o 2 días para instalar Linux|
 |   |   |   |   |   |
-|**6.**|   |   |   |   |
+|**6. Descargar los códigos e instalarlos**|30 minutos|10%|   |Dependerá de si ya se tienes las configuraciones necesarias como el firmware en el ESP (ver manual de operación)|
 |   |   |   |   |   |
-|**7.**|   |   |   |   |
+|**7. Ejecutar los códigos como primeras pruebas**|30 minutos|10%|   |   |
 |   |   |   |   |   |
-|**8.**|   |   |   |   |
+|**8. Verificar si envía datos de telemetría correctamente a Thingsboard**|30 minutos|10%|   |Si no se está enviando datos puede llavar hasta 1 hora para corregir|
 |   |   |   |   |   |
-|**9.**|   |   |   |   |
+|**9. Montar el dispositivo en el lugar requerido**|1 hora|5%|Pendiente imprimir la carcasa|   |
 |   |   |   |   |   |
-|**10.**|   |   |   |   |
-|   |   |   |   |   |
-|**11.**|   |   |   |   |
-|   |   |   |   |   |
-|**12.**|   |   |   |   |
-|   |   |   |   |   |
-|**13.**|   |   |   |   |
-|   |   |   |   |   |
-|**14.**|   |   |   |   |
-|   |   |   |   |   |
-|**15.**|   |   |   |   |
-|   |   |   |   |   |
-|**16.**|   |   |   |   |
-|   |   |   |   |   |
-|**17.**|   |   |   |   |
-|   |   |   |   |   |
-|**18.**|   |   |   |   |
-|   |   |   |   |   |
-|**19.**|   |   |   |   |
-|   |   |   |   |   |
-|**20.**|   |   |   |   |
-|   |   |   |   |   |
+|**10. Dejarlo operando durante 48 horas como prueba "Burn it"**|2 días|10%|   |   |
+|----------|----------|----------|----------|----------|
+|**Resumen**|**%**|**Nota-1**|**Nota-2**|**Nota-3**|
+|**Porcentaje de avance total**|90%|Cuestiones estéticas pendientes(cableado, placa PCB de complemento)|Imprimir la carcasa|   |
+|**Pruebas prácticas**|100%|Prueba de funcionamiento en 3 ESP's|   |   |
+|**Por probar**|   |   |   |   |
+|1. Funcionamiento con la carcasa|2. Funcionamiento con el PCB diseñado|   |   |   |
 
 ------------
 
