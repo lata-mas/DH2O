@@ -203,6 +203,69 @@ Representación gráfica del dispositivo H2O
 
 La etapa en la que se encuentra el desarrollo del dispositivo H2O, es la de documentación, se espera que sea la penúltima etapa, para poder ser replicado de forma eficiente y eficaz.
 
+#### Seguimiento de actividades del dispositivo H2O
+
+|**Actividad**|**Tiempo estimado de ejecución**|**% de avance**|**Pendientes**|**Notas**   |
+| :------------: | :------------: | :------------: | :------------: | :------------: |
+|**1.**| |   |   |   |
+|   |   |   |   |   |
+|**2.**|   |   |   |   |
+|   |   |   |   |   |
+|**3.**|   |   |   |   |
+|   |   |   |   |   |
+|**4.**|   |   |   |   |
+|   |   |   |   |   |
+|**5.**|   |   |   |   |
+|   |   |   |   |   |
+|**6.**|   |   |   |   |
+|   |   |   |   |   |
+|**7.**|   |   |   |   |
+|   |   |   |   |   |
+|**8.**|   |   |   |   |
+|   |   |   |   |   |
+|**9.**|   |   |   |   |
+|   |   |   |   |   |
+|**10.**|   |   |   |   |
+|   |   |   |   |   |
+|**11.**|   |   |   |   |
+|   |   |   |   |   |
+|**12.**|   |   |   |   |
+|   |   |   |   |   |
+|**13.**|   |   |   |   |
+|   |   |   |   |   |
+|**14.**|   |   |   |   |
+|   |   |   |   |   |
+|**15.**|   |   |   |   |
+|   |   |   |   |   |
+|**16.**|   |   |   |   |
+|   |   |   |   |   |
+|**17.**|   |   |   |   |
+|   |   |   |   |   |
+|**18.**|   |   |   |   |
+|   |   |   |   |   |
+|**19.**|   |   |   |   |
+|   |   |   |   |   |
+|**20.**|   |   |   |   |
+|   |   |   |   |   |
+
+------------
+
+## CHECK-LIST de lo que debe tener el dispositivo
+- [x] Lista de costos
+- [x] SRC completos
+- [x] Pictograma de conexión
+- [x] Esquemático de conexión
+- [x] Archivos de diseño PCB
+- [x] Archivos gerber para el maquinado del PCB
+- [x] Lista de materiales
+- [x] Planos CAD
+- [x] Archivos de diseño CAD
+- [x] Archivos STL para impresión 3D
+- [x] Manual de operación
+- [x] Manual de ensamble
+- [x] Fichas técnicas o datasheet de los módulos, sensores y componentes usados
+- [x] Documento de errores, soluciones y recomendaciones
+
 ### 4.5.9 Fue hecho físicamente
 
 El dispositivo sí se ha hecho de forma práctica, es decir, se ha llevado a la práctica para comprobar el funcionamiento del mismo, solo como pruebas de funcionamiento, el dispositivo completo y funcionando durante largos períodos de tiempo no se ha realizado, falta montarlo completo, que mida 1 conexión de agua y con su respectiva carcasa de protección.
