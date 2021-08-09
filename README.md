@@ -203,8 +203,6 @@ Representación gráfica del dispositivo H2O
 
 La etapa en la que se encuentra el desarrollo del dispositivo H2O es la de documentación final, realmente el H2O ya funciona bien, según lo establecido pero, falta complementar con la carcasa, la prueba con la placa diseñada y la información final.
 
-**El porcentaje de avance en las actividades corresponde a 10% como valor máximo para cada una, para llegar a un total del 100%.**
-
 #### Seguimiento de actividades del dispositivo H2O
 
 |**Actividad**|**Tiempo estimado de ejecución**|**Referenciación**|
