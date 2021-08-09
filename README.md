@@ -207,34 +207,35 @@ La etapa en la que se encuentra el desarrollo del dispositivo H2O es la de docum
 
 #### Seguimiento de actividades del dispositivo H2O
 
-|**Actividad**|**Tiempo estimado de ejecución**|**% de avance**|**Pendientes**|**Notas**   |
-| :------------: | :------------: | :------------: | :------------: | :------------: |
-|**1. Revisión de documentos existentes necesarios para operarlo de acuerdo a la CHECK-LIST**|1-2 horas|10%|   |   |
-|   |   |   |   |   |
-|**2. Verificar si cuenta con los materiales requeridos**|30 minutos|5%|Falta maquinar una placa y la impresión de la carcasa|   |
-|componentes electrónicos|carcasa del H2O|herramientas electrónicas|Jumper's y cables para coneión|   |
-|   |   |   |   |   |
-|**3. Leer el manual de operación para entender lo que se hará**|30 minutos|10%|   |   |
-|   |   |   |   |   |
-|**4. Ver los diagramas de conexión**|30 minutos|10%|   |   |
-|   |   |   |   |   |
-|**5. Conectar el ESP a la computadora con las conexiones correspondientes del diagrama y configurar de acuerdo al manual de operación**|30 minutos|%10|   |Lo anterior si ya se tiene todo listo, pero si no, puede llevarse hasta 1 o 2 días para instalar Linux|
-|   |   |   |   |   |
-|**6. Descargar los códigos e instalarlos**|30 minutos|10%|   |Dependerá de si ya se tienes las configuraciones necesarias como el firmware en el ESP (ver manual de operación)|
-|   |   |   |   |   |
-|**7. Ejecutar los códigos como primeras pruebas**|30 minutos|10%|   |   |
-|   |   |   |   |   |
-|**8. Verificar si envía datos de telemetría correctamente a Thingsboard**|30 minutos|10%|   |Si no se está enviando datos puede llavar hasta 1 hora para corregir|
-|   |   |   |   |   |
-|**9. Montar el dispositivo en el lugar requerido**|1 hora|5%|Pendiente imprimir la carcasa|   |
-|   |   |   |   |   |
-|**10. Dejarlo operando durante 48 horas como prueba "Burn it"**|2 días|10%|   |   |
-|----------|----------|----------|----------|----------|
-|**Resumen**|**%**|**Nota-1**|**Nota-2**|**Nota-3**|
-|**Porcentaje de avance total**|90%|Cuestiones estéticas pendientes(cableado, placa PCB de complemento)|Imprimir la carcasa|   |
-|**Pruebas prácticas**|100%|Prueba de funcionamiento en 3 ESP's|   |   |
-|**Por probar**|   |   |   |   |
-|1. Funcionamiento con la carcasa|2. Funcionamiento con el PCB diseñado|   |   |   |
+|**Actividad**|**Tiempo estimado de ejecución**|**Referenciación**|
+| :------------: | :------------: | :------------: |
+|**1. Revisión de documentos existentes necesarios para operarlo de acuerdo a la CHECK-LIST**|2 h|[**°Documentación**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Documentacion) [**°Check-List**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/blob/master/ChecklistH2O.md)|
+|   |   |   |
+|**2. Verificar si cuenta con los materiales requeridos**|1/2 h|[**Materiales**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Materiales)|
+|   |   |   |
+|**3. Imprimir la carcasa en 3D (3 PARTES)**|16 h|[**Archivos STL**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/CAD)|
+|   |   |   |
+|**4. Instalar Linux**|12 h|Puede realizarse simultáneamente con otras actividades|
+|   |   |   |
+|**5. Leer el manual de operación para entender lo que se hará**|1 h|[**Manual**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/blob/master/Manuales/ManualDeOperacion.md)|
+|   |   |   |
+|**6. Entender los diagramas de conexión**|1/2 h|[**Diagramas**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Diagramas)|
+|   |   |   |
+|**7. Conectar el ESP a la computadora y configurar el firmware de acuerdo al manual de operación**|1 h|   |
+|   |   |   |
+|**8. Conectar el ESP a la computadora con el circuito del dispositivo**|1 h|[**Esquemático**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/blob/master/Diagramas/EsquematicoKiCADH2O.pdf)|
+|   |   |   |
+|**9. Descargar e instalar el código completo (son 5 .py)**|1/2 h|[**Código H2O**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/SRC)|
+|   |   |   |
+|**Ejecutar el código como primera prueba y asegurarse que funciona**|   |   |
+|   |   |   |
+|**11. Verificar si envía datos de telemetría correctamente a Thingsboard**|1/2 h|[**°Dashboard**](http://iot.ier.unam.mx:8080/dashboard/5825dc60-059e-11eb-9c3f-d1ead9980bc3?publicId=0e7066c0-6e70-11e8-b1f3-991d62d050bd)|
+|   |   |   |
+|**12. Montar el dispositivo en el lugar requerido**|1 h|   |
+|   |   |   |
+|**13. Dejarlo operando durante 24 horas como prueba "Burn it"**|24 h|   |
+|   |   |   |
+|**Tiempo total apróximado:**|**3 días**|Dependerá de la habilidad y conocimientos que se tengan, puede llevar menos tiempo o más|
 
 ------------
 
