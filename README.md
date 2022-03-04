@@ -1,11 +1,55 @@
-# DH2O1
-# 1.0 Introducción
+# Dispositivo H2O
 
-El futuro de la humanidad y del planeta dependen de la manera en la que produzcamos energía: un sistema energético fiable, asequible y descarbonizado es fundamental.
-Las energías renovables son fuentes de energía limpias, inagotables y crecientemente competitivas. Se diferencian de los combustibles fósiles principalmente en su diversidad, abundancia y potencial de aprovechamiento en cualquier parte del planeta, pero sobre todo en que no producen gases de efecto invernadero, causantes del cambio climático, ni emisiones contaminantes. Además, sus costes evolucionan a la baja de forma sostenida, mientras que la tendencia general de costes de los combustibles fósiles es la opuesta.
-El crecimiento de las energías renovables es imparable, como queda reflejado en las estadísticas aportadas anualmente por la Agencia Internacional de la Energía (AIE): según las previsiones de la AIE, la participación de las renovables en el suministro eléctrico global pasará del 26% en 2018 al 44% en 2040, y proporcionarán 2/3 del incremento de demanda eléctrica registrado en este período, principalmente a través de las tecnologías eólica y fotovoltaica.
-De acuerdo a la AIE, la demanda mundial de electricidad aumentará un 70% hasta 2040, elevando su participación en el uso de energía final del 18% al 24% en el mismo período, espoleada principalmente por regiones emergentes (India, China, África, Oriente Medio y el Sureste asiático).
-Con lo anterior y compartiendo la idea de utilizar mas las energías limpias, se implementan nuevas formas de controlar los diferentes recursos que se utilizan en el día a día en el Instituto de Energías Renovables-UNAM, se implementarán dispositivos que puedan medir la cantidad de recursos que se consumen como lo son: el agua, la energía eléctrica, humedad, intensidad luminosa y temperatura de un edificio del instituto, con la intención de poder medir cada variable y posteriormente observar cuanto se consume para tratar de reducirlos en gran medida, lo anterior se lleva a cabo con dispositivos electrónicos que están integrados principalmente con sensores y haciendo uso de tecnologías abiertas para los programas y envío de datos a la plataforma Thingsboard para la visualización de gráficos.
+Este dispositivo se desarrollo con lel objetivo de medir la cantidad de agua que se consume en un edificio y poder implementar medidas para evitar consumos excesivos de este valioso recurso.
+
+El dispositivo funciona con un módulo NodeMCU Lolin V3→ESP8266-12E, permitiendo interpretar los datos que recolecta el sensor YF-S201 (sensor de caudal de agua), el microcontrolador  permite interpretar datos y después enviarlos a través de Wifi a una plataforma de imternet. La ventaja más significativa es precisamente esa, que el módulo tiene wifi, permitiendo que pueda enviar datos en tiempo real a diferentes plataformas de visualización, ademas de su reducido tamaño.
+
+A continuación se muestra el esquema general del dispositivo y algunos de sus componetes principales:
+
+1. Sensor de caudal
+2. Divisor de voltaje
+3. LM324
+
+![](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Imagenes/h20_esquema_gral.png?raw=true)
+
+[Diagrama electrico](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Diagramas/DispositivoH2O1Esquem%C3%A1tico.pdf)
+
+**Sensor de caudal**
+
+Sensor propuesto: YFS-201
+
+ Este sensor se acopla muy bien a la tubería de agua de cualquier edificio o casa y contiene un sensor de molino para medir la cantidad de líquido que ha pasado a través de él. También tiene un sensor magnético de efecto Hall que emite un impulso eléctrico con cada revolución. El sensor de efecto Hall está sellado para permanecer seguro y seco. El sensor viene con tres cables: Rojo (energía 5-24 VDC) Negro (tierra) Amarillo (salida de pulsos de efecto Hall) Al contar los pulsos de la salida del sensor, se puede calcular fácilmente el flujo de agua. Cada pulso es de aproximadamente 2.25 mililitros. 
+ 
+ La señal de pulso es una simple onda cuadrada así que es bastante fácil de registrar y convertir en litros por minuto utilizando la siguiente ecuación.
+ 
+ ![](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Imagenes/EcuacionB.PNG?raw=true)
+
+
+**Divisor de voltaje**
+
+Debido a que el voltaje de operacion de nuestro microcontrolador (ESP8266) es de 3.3v y estamos ocupando una fuente de 5v para alimentar tanto al sensor de caudal como al microcontrolador se implemento un divisor de voltaje que no es mas que un arreglo de resistencias para cuidar la vida util de nuestro ESP.
+
+**LM324**
+
+Este integrado es un amplificador operacional sin embargo tambien tiene la funcion de comparador de voltaje, la cual estamos utilizando para este dispositivo.
+
+
+La lista de la electronica y materiales del dispositivo se encuentra en el archivo  [materiales](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Materiales/Lista_materiales_h2o.xlsx) o en [lista_drive](https://docs.google.com/spreadsheets/d/189IVU7i7mgoemxYWTE_gQPPNS4Jn7LhwTmuZ7sgd4DA/edit#gid=0)
+
+- [ ] Lista de costos
+- [ ] SRC completos
+- [ ] Pictograma de conexión
+- [ ] Esquemático de conexión
+- [ ] Archivos de diseño PCB
+- [ ] Archivos gerber para el maquinado del PCB
+- [x] Lista de materiales
+- [ ] Planos CAD
+- [ ] Archivos de diseño CAD
+- [ ] Archivos STL para impresión 3D
+- [ ] Manual de operación
+- [ ] Manual de ensamble
+- [ ] Fichas técnicas o datasheet de los módulos, sensores y componentes usados
+- [ ] Documento de errores, soluciones y recomendaciones
 
 ### 1.1 Sobre los autores
 
@@ -18,6 +62,7 @@ Con lo anterior y compartiendo la idea de utilizar mas las energías limpias, se
 |Escobar Escobar José Williams|ITE|escobarescobarwilliams@gmail.com|
 |Guillermo Barrios del Valle|IER-UNAM|gbv@ier.unam.mx|
 |Guillermo Ramírez Zúñiga|IER-UNAM|guraz@ier.unam.mx|
+|Giovanni Velazquez Avilez||velazquezgio96@gmail.com|
 
 ------------
 
@@ -33,112 +78,6 @@ Proyecto número 291600 del Fondo de Sustentabilidad Energética.
 
 ------------
 
-# 3. Conceptos y definiciones
-
-### 3.1 Saber como
-
-Es necesario conocer algunas cosas antes de intentar entender muchos puntos del proyecto, como por ejemplo: lectura de planos electrónicos, diseño CAD, conocimiento medio de electrónica, programación, entre otras.
-
-### 3.2 Diseño
-
-Deberá manejar algún software de diseño por computadora, para modificar, replicar el diseño existente e incluso conocer la sección de ensamble de piezas en el software de su preferencia.
-
-### 3.3 Hacer
-
-Fabricar, construir, ensamblar, imprimir, configurar, programar y compilar códigos.
-
-### 3.4 Open source
-
-Por su traducción al español, "fuente abierta" durante el desarrollo del proyecto se busca que todos los programas a usar, sean de fuente abierta para evitar pagos costosos de Licencia, para cada necesidad existe un software de fuente abierta.
-
-### 3.5 Thingsboard
-
-Es una plataforma web que nos ayuda a visualizar gráficamente las variables que estamos midiendo para tener referencias de lo que se está haciendo.
-
-### 3.6 Github
-
-Plataforma web, que sirve como "bodega" para almacenar un proyecto con sus respectivas versiones o modificaciones que pueda sufirir durante el desarrollo, al mismo tiempo ayuda a documentar y a entender la estructura de su funcionamiento.
-
-------------
-
-# 4.0 Especificaciones de la estructura
-
-### 4.1 Introducción
-
-En esta sección se encuentra la estructura general del proyecto, de forma que sea entendible y que se le pueda dar seguimiento para la lectura del mismo y entender que lleva un orden.
-Esta forma de estructurar el proyecto es un formato estándar de Open Know-How, cabe mencionar que no es el ideal pero para entender de forma general un proyecto de electrónica es aceptable.
-El almacenamiento en Github nos ayuda en todo momento a realizar modificaciones que creemos necesarias y sobre todo a tener control total de los cambios que va sufriendo el proyecto durante el desarrollo, si alguna no nos agrada o no es la correcta, podemos regresar sin ningún problema y dejarlo como antes.
-
-### 4.2 Estructura
-
-### 4.2.1 Formato
-
-El formato de archivo para la documentación del dispositivo H2O es Markdown por su facilidad de uso.
-Algunos archivos están en formato PDF pero es necesario para una mejor visualización de los esquemas que se muestran en ese formato.
-
-### 4.2.2 Nombre del archivo
-
-Para los nombres de los archivos, es necesario que no se usen comas, virgulilla o tilde de la ñ, las separaciones de las palabras pueden ser usadas con guiones o sin espacios, pero con una letra mayúscula para saber donde termina e inicia otra palabra, por ejemplo: ArchivoEstructura".
-Las extensiones de los archivos pueden ser:
-
-- .json | Para los archivos que se realizaron con EasyEDA.
-- .md | Para los archivos que son creados en formato de texto Markdown, M Editor, DILLINGER e incluso el archivo README de Github.
-- .fzz | Para los archivos que fueron creados en el software de Fritzing, pictogramas de conexiones.
-- .ESTEP | Para los archivos de diseño CAD, que pueden ser visualizados en cualquier software de diseño, es formato general.
-- .STL | Para los archivos de impresión, para que el diseño de la carcasa del dispositivo pueda ser visualizado al momento de imprimirlo en 3D.
-- .zip | Para los archivos de impresión de la placa o PCB, están comprimidos porque son varios archivos.
-- .PDF | Para los archivos que si se guardan en otro formato, posiblemente se moverían mucho las líneas, formas, tablas, imágenes, etc. Los archivos que se encontrarán en el repositorio en este formato serán los planos para el diseño de la carcasa.
-
-### 4.2.3 Vínculos
-
-En algunas secciones de la documentación es necesario nombrar o hacer referencias a rutas externas, pueden ser a imágenes, páginas web entre otras, simplemente se hace uso de los links originales de la web en cuestión, copiando y posteriormente pegando en la sección correspondiente para no tener que buscar de manera externa, deberán dejar espacios entre título o texto para que no existan errores de posición en el archivo de texto final.
-
-#### 4.2.4 Ubicación del repositorio
-
-El repositorio de todo el proyecto se encuentra en Github, las diferentes carpetas y archivos están alojadas en un un solo repositorio, no existe una carpeta raíz, pero sí existe una dirección raíz y es la siguiente:
-
-![](https://github.com/AltamarMx/SensorH2O/blob/master/Imagenes/LogoGithubB.jpg?raw=true)
-
-[SensorH2O](https://github.com/AltamarMx/SensorH2O)
-
-### 4.3 Información de la web
-
-La página de presentación del proyecto, está en la sección de Github.
-
-El sitio web del formato estándar para documentar es el siguiente:
-
-[README](https://github.com/AltamarMx/SensorH2O/blob/master/README.md)
-
-### 4.4 Propiedades descriptivas
-
-### 4.4.1 Título
-
-##### Dispositivo H2O
-##### Medidor del consumo de agua
-
-### 4.4.2 Descripción
-
-##### Energías renovables
-##### Dispositivo pensado para el uso de medición del consumo de agua y preservar el cuidado del recurso en edificaciones, donde existe gran demanda del mismo
-
-### 4.4.3 Uso previsto
-
-##### Control de variable
-###### Informa al usuario el consumo de agua de un lugar donde existe gran consumo del recurso, puede ser cuantificado para conocer exactamente en que momento se ha consumido mas y con base a esa información pueden aplicarse estrategias para mantener un consumo menor o aplicar ciertas medidas que ayuden a disminuirlo.
-
-### 4.4.4 Palabras clave
-
-##### H2O
-##### Electrónica
-##### Dispositivo
-##### Medidor de caudal
-
-### 4.4.5 Precauciones y recomendaciones
-
-Son recomendaciones para operar el dispositivo H2O, pueden existir más, pero eso depende del usuario, pueden surgirle diferentes dudas, a unos más que a otros.
-En este link hay algunos que pueden ayudar:
-
-[ErroresYsoluciones](https://github.com/AltamarMx/SensorH2O/blob/master/Manuales/ErroresAndSoluciones.md)
 
 ### 4.5.6 Contacto primario
 
@@ -193,15 +132,7 @@ En este link hay algunos que pueden ayudar:
 **Email:** escobarescobarwilliams@gmail.com
 
 
-### 4.5.7 Imagen
 
-Representación gráfica del dispositivo H2O
-
-![](https://github.com/jwilliamsee/SensorH2O1/blob/main/Imagenes/PORTADAH2O1.PNG?raw=true)
-
-### 4.5.8 Etapa de desarrollo
-
-La etapa en la que se encuentra el desarrollo del dispositivo H2O es la de documentación final, realmente el H2O ya funciona bien, según lo establecido pero, falta complementar con la carcasa, la prueba con la placa diseñada y la información final.
 
 #### Seguimiento de actividades del dispositivo H2O
 
@@ -237,21 +168,6 @@ La etapa en la que se encuentra el desarrollo del dispositivo H2O es la de docum
 
 ------------
 
-#### CHECK-LIST de lo que debe tener el dispositivo
-- [x] Lista de costos
-- [x] SRC completos
-- [x] Pictograma de conexión
-- [x] Esquemático de conexión
-- [x] Archivos de diseño PCB
-- [x] Archivos gerber para el maquinado del PCB
-- [x] Lista de materiales
-- [x] Planos CAD
-- [x] Archivos de diseño CAD
-- [x] Archivos STL para impresión 3D
-- [x] Manual de operación
-- [x] Manual de ensamble
-- [x] Fichas técnicas o datasheet de los módulos, sensores y componentes usados
-- [x] Documento de errores, soluciones y recomendaciones
 
 ### 4.5.9 Fue hecho físicamente
 
@@ -268,53 +184,6 @@ El link del estándar usado es el siguiente:
 
 [EstandarOpenKnowHow](https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/src/branch/master/1#a40dfa47-8bff-4e28-9338-3f808ddfe6ae)
 
-### 4.6 Documentación
-
-### 4.6.1 Punto de entrada de la documentación:
-
-
-### Carpeta [CAD](https://github.com/AltamarMx/SensorH2O/tree/master/CAD)
-
-En la carpeta CAD se encuentran los archivos .STEP del diseño de la carcasa realizado, hasta el momento en SolidWorks, la carcasa está diseñada en 3 partes: 1. La base de la carcasa, 2. La base media y 3. La tapa, para poder visualizar éstos archivos es necesario tener instalado algún software de diseño.
-
-En la misma carpeta se encuentran planos de la carcasa en formato PDF y los archivos .STL para visualización.
-
-### Carpeta [Diagramas](https://github.com/AltamarMx/SensorH2O/tree/master/Diagramas)
-
-En la carpeta de Diagramas se encuentra el esquemático en .json, para visualizarlo o editarlo es necesario clonar el repo localmente, ir al software en versión online, sin crear cuenta, abrir el archivo desde la versión online.
-También se encuentra el esquemático en PDF.
-
-Se encuentran el dieño de PCB en .json, para editarlo es necesario abrirlo con el software EasyEDA, primero descargarlo y después abrirlo desde el software.
-
-Para la representación gráfica de los componentes del dispositivo y conexión de los sensores, se encuentran los archivos con extensión .fzz, son los esquemas de conexión realizados en el software Open source Fritzing para conexión de 1 sensor.
-
-En la carpeta también se encuentra un archivo .zip con lo necesario para maquinar el pcb.
-
-### Carpeta [Imagenes](https://github.com/AltamarMx/SensorH2O/tree/master/Imagenes)
-
-En esta carpeta están todas las imagenes que se usaron en los archivos de los manuales y otras imagenes necesarias para el complemento del dispositivo H2O, que en todas se mencionan en algún archivo existente en el repositorio.
-
-### Carpeta [Manuales](https://github.com/AltamarMx/SensorH2O/tree/master/Manuales)
-
-En esta carpeta se encuantran 3 archivos, 2 manuales y uno de errores:
-1. El manual de operación, necesario consultarlo antes de iniciar con la replica del dispositivo.
-2. El manual de ensamble, de manera gráfica (ilustrativa), se describe de forma general como realizar el ensamble de los componentes del dispositivo.
-3. El otro archivo tiene algunas sugerencias de operación para operar el dispositivo H2O.
-
-### Carpeta [Materiales](https://github.com/AltamarMx/SensorH2O/tree/master/Materiales)
-
-En la carpeta "Materiales" se encuentran dos archivos con extensión md y otros en PDF.
-1. En el archivo Lista_de_materiales_H2O se encuentran los materiales que ne necesitan para el pcb.
-2. En el archivo ListaCostosH2O se encuentran los costos unitarios y total de los componentes.
-3. Los archivos en PDF son hojas de datos de algunos componentes que se usan en el dipositivo H2O.
-
-### Carpeta [SRC](https://github.com/AltamarMx/SensorH2O/tree/master/SRC)
-
-En esta carpeta está el código para 1 sensor de agua, complemento de los otros códigos necesarios del dispositivo, hay un main1S que ese es el código para probar un sensor, deberá cargar el código sin el 1 al final del nombre, es decir, será "main.py" en lugar de "main1S.py" y los otros para el funcionamiento adecuado, para operar el dispositivo son 5 códigos de los que están en la carpeta.
-
-### Archivo [ChecklistH2O](https://github.com/AltamarMx/SensorH2O/blob/master/ChecklistH2O.md)
-
-En este archivo se encuentra en forma de lista los documentos que el dispositivo H2O debe tener para su correcta operación.
 
 ### Thingsboard
 
