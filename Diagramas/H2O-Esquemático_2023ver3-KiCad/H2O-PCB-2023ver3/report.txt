@@ -1,0 +1,11 @@
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-F_Cu.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-B_Cu.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-F_Paste.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-B_Paste.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-F_Mask.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-B_Mask.gbr'.
+Plotted to 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-Edge_Cuts.gbr'.
+Archivo de trabajo Gerber 'C:\Users\bol_j\Desktop\Estadias\DH2O_2\diagramas_ver2023\H2O-Esquemático_2023ver3-KiCad\H2O-PCB-2023ver3\H2O-Esquemático_2023ver3-KiCad-job.gbrjob' creado.
+Info: Listo.

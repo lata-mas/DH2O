@@ -25,6 +25,10 @@ Sensor propuesto: YFS-201
  ![](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Imagenes/EcuacionB.PNG?raw=true)
 
 
+**Divisor de voltaje**
+
+Debido a que el voltaje de operacion de nuestro microcontrolador (ESP8266) es de 3.3v y estamos ocupando una fuente de 5v para alimentar tanto al sensor de caudal como al microcontrolador se implemento un divisor de voltaje que no es mas que un arreglo de resistencias para cuidar la vida util de nuestro ESP.
+
 **LM324**
 
 Este integrado es un amplificador operacional sin embargo tambien tiene la funcion de comparador de voltaje, la cual estamos utilizando para este dispositivo.
