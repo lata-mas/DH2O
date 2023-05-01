@@ -102,33 +102,25 @@ El dispositivo H2O tiene como alcance, en esta etapa, contar con toda la documen
 
 |**Actividad**|**Tiempo estimado de ejecución**|**Referenciación**|
 | :------------: | :------------: | :------------: |
-|**1. Revisión de documentos existentes necesarios para operarlo de acuerdo a la CHECK-LIST**|2 h|[**°Documentación**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Documentacion) [**°Check-List**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/blob/master/ChecklistH2O.md)|
+|**1. Revisión de documentos existentes necesarios para operarlo de acuerdo a la CHECK-LIST**|2 h|[**°Documentación**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Documentacion) |
 |   |   |   |
-|**2. Verificar si cuenta con los materiales requeridos**|1/2 h|[**Materiales**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Materiales)|
+|**2. Verificar si cuenta con los materiales requeridos**|1/2 h|[**Materiales**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/Documentacion/Materiales)|
 |   |   |   |
-|**3. Imprimir la carcasa en 3D (3 PARTES)**|16 h|[**Archivos STL**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/CAD)|
+|**3. Imprimir la carcasa en 3D (3 PARTES)**|16 h|[**Archivos STL**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/carcasa)|
 |   |   |   |
-|**4. Instalar Linux**|12 h|Puede realizarse simultáneamente con otras actividades|
+|**4. Leer el manual de operación para entender lo que se hará**|1 h|[**Manual**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Documentacion/Manuales/ManualDeOperacion.md)|
 |   |   |   |
-|**5. Leer el manual de operación para entender lo que se hará**|1 h|[**Manual**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/blob/master/Manuales/ManualDeOperacion.md)|
+|**5. Entender los diagramas de conexión**|1/2 h|[**Diagramas**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Diagramas/H2O-Esquem%C3%A1tico_2023ver2-KiCad.pdf)|
 |   |   |   |
-|**6. Entender los diagramas de conexión**|1/2 h|[**Diagramas**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/Diagramas)|
+|**6. Descargar e instalar el código completo (son 5 .py)**|1/2 h|[**Código H2O**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/codigo)|
 |   |   |   |
-|**7. Conectar el ESP a la computadora y configurar el firmware de acuerdo al manual de operación**|1 h|   |
+|**7. Ejecutar el código como primera prueba y asegurarse que funciona**|   |   |
 |   |   |   |
-|**8. Conectar el ESP a la computadora con el circuito del dispositivo**|1 h|[**Esquemático**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/blob/master/Diagramas/EsquematicoKiCADH2O.pdf)|
+|**8. Montar el dispositivo en el lugar requerido**|1 h|   |
 |   |   |   |
-|**9. Descargar e instalar el código completo (son 5 .py)**|1/2 h|[**Código H2O**](https://github.com/Dispositivos-Edificio-Bioclimatico/SensorH2O/tree/master/SRC)|
+|**9. Dejarlo operando durante 24 horas como prueba "Burn it"**|24 h|   |
 |   |   |   |
-|**Ejecutar el código como primera prueba y asegurarse que funciona**|   |   |
-|   |   |   |
-|**11. Verificar si envía datos de telemetría correctamente a Thingsboard**|1/2 h|[**°Dashboard**](http://iot.ier.unam.mx:8080/dashboard/5825dc60-059e-11eb-9c3f-d1ead9980bc3?publicId=0e7066c0-6e70-11e8-b1f3-991d62d050bd)|
-|   |   |   |
-|**12. Montar el dispositivo en el lugar requerido**|1 h|   |
-|   |   |   |
-|**13. Dejarlo operando durante 24 horas como prueba "Burn it"**|24 h|   |
-|   |   |   |
-|**Tiempo total apróximado:**|**3 días**|Dependerá de la habilidad y conocimientos que se tengan, puede llevar menos tiempo o más|
+|**10. Tiempo total apróximado:**|**3 días**|Dependerá de la habilidad y conocimientos que se tengan, puede llevar menos tiempo o más|
 
 ------------
 
