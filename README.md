@@ -14,40 +14,8 @@ A continuación se muestra el esquema general del dispositivo y algunos de sus c
 
 [Diagrama electrico](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Diagramas/DispositivoH2O1Esquem%C3%A1tico.pdf)
 
-**Sensor de caudal**
 
-Sensor propuesto: YFS-201
-
- Este sensor se acopla muy bien a la tubería de agua de cualquier edificio o casa y contiene un sensor de molino para medir la cantidad de líquido que ha pasado a través de él. También tiene un sensor magnético de efecto Hall que emite un impulso eléctrico con cada revolución. El sensor de efecto Hall está sellado para permanecer seguro y seco. El sensor viene con tres cables: Rojo (energía 5-24 VDC) Negro (tierra) Amarillo (salida de pulsos de efecto Hall) Al contar los pulsos de la salida del sensor, se puede calcular fácilmente el flujo de agua. Cada pulso es de aproximadamente 2.25 mililitros. 
- 
- La señal de pulso es una simple onda cuadrada así que es bastante fácil de registrar y convertir en litros por minuto utilizando la siguiente ecuación.
- 
- ![](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Imagenes/EcuacionB.PNG?raw=true)
-
-
-**LM324**
-
-Este integrado es un amplificador operacional sin embargo tambien tiene la funcion de comparador de voltaje, la cual estamos utilizando para este dispositivo.
-
-
-La lista de la electronica y materiales del dispositivo se encuentra en el archivo  [materiales](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Materiales/Lista_materiales_h2o.xlsx) o en [lista_drive](https://docs.google.com/spreadsheets/d/189IVU7i7mgoemxYWTE_gQPPNS4Jn7LhwTmuZ7sgd4DA/edit#gid=0)
-
-- [ ] Lista de costos
-- [ ] SRC completos
-- [ ] Pictograma de conexión
-- [ ] Esquemático de conexión
-- [ ] Archivos de diseño PCB
-- [ ] Archivos gerber para el maquinado del PCB
-- [x] Lista de materiales
-- [ ] Planos CAD
-- [ ] Archivos de diseño CAD
-- [ ] Archivos STL para impresión 3D
-- [ ] Manual de operación
-- [ ] Manual de ensamble
-- [ ] Fichas técnicas o datasheet de los módulos, sensores y componentes usados
-- [ ] Documento de errores, soluciones y recomendaciones
-
-### 1.1 Sobre los autores
+### 1 Sobre los autores
 
 |Nombre|Instituto/Organización|Email|
 | ------------ | ------------ | ------------ |
@@ -59,23 +27,18 @@ La lista de la electronica y materiales del dispositivo se encuentra en el archi
 |Guillermo Barrios del Valle|IER-UNAM|gbv@ier.unam.mx|
 |Guillermo Ramírez Zúñiga|IER-UNAM|guraz@ier.unam.mx|
 |Giovanni Velazquez Avilez||velazquezgio96@gmail.com|
+|José Diego Salgado Nieto||salgadojosediego@gmail.com|
 
 ------------
 
-# 2. Alcance
+# Alcance
 
 El dispositivo H2O tiene como alcance, en esta etapa, contar con toda la documentación necesaria para ser replicado de manera eficaz y eficientemente, después de ser trabajado por un grupo de personas se espera que el proyecto tenga todo lo que se necesita para que otras personas puedan entender el funcionamiento y requisitos de operación.
 
-La audiencia a la que está destinada es:
-
-- Por el momento a personal del IER-UNAM que se encuentra trabajando en el proyecto "Edificios demostrativos de diseño bioclimático en clima cálido subhúmedo en el Instituto de Energías Renovables UNAM".
-Proyecto número 291600 del Fondo de Sustentabilidad Energética.
-- Compañeros que se interesen en aportar al proyecto para mejorar o para replicarlo directamente.
-
 ------------
 
 
-### 4.5.6 Contacto primario
+### Contacto primario
 
 **Inv. A tiempo completo:** Dr. Guillermo Barrios del Valle
 
@@ -87,7 +50,7 @@ Proyecto número 291600 del Fondo de Sustentabilidad Energética.
 
 **Email:** guraz@ier.unam.mx
 
-### 4.5.7 Colaboradores
+### Colaboradores
 
 **Nombre:** Luis Fernando De Olarte Delgado
 
@@ -128,6 +91,11 @@ Proyecto número 291600 del Fondo de Sustentabilidad Energética.
 **Email:** escobarescobarwilliams@gmail.com
 
 
+**Nombre:** Salgado Nieto josé Diego
+**Insituto** Universidad Tecnológica Emiliano Zapata (UTEZ)
+**Email:** salgadojosediego@gmail.com
+
+
 
 
 #### Seguimiento de actividades del dispositivo H2O
@@ -164,23 +132,6 @@ Proyecto número 291600 del Fondo de Sustentabilidad Energética.
 
 ------------
 
-
-### 4.5.9 Fue hecho físicamente
-
-El dispositivo sí se ha hecho de forma práctica, es decir, se ha llevado a la práctica para comprobar el funcionamiento del mismo, solo como pruebas de funcionamiento, el dispositivo completo y funcionando durante largos períodos de tiempo no se ha realizado, falta montarlo completo, que mida 1 conexión de agua y con su respectiva carcasa de protección.
-
-### 4.5.10 Se ha comprobado la documentación
-
-La réplica del dispositivo usando la estructura aquí mostrada y siguiendo la documentación no se ha realizado, aún está en revisión de estructura de documentación y de archivos factibles para el desarrollo eficiente.
-
-### 4.5.11 Estándares usados
-
-El estándar de documentación completo, no se ha seguido, pero si se ha usado el estándar para esta documentación de Open Know-How, algunos puntos se han omitido porque al no ser la estructura para documentar proyectos electrónicos, existen puntos que salen sobrando o que definitivamente no aplican para este tipo de proyectos.
-El link del estándar usado es el siguiente:
-
-[EstandarOpenKnowHow](https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/src/branch/master/1#a40dfa47-8bff-4e28-9338-3f808ddfe6ae)
-
-
 ### Thingsboard
 
 Dashboard del dispositivo H2O en la plataforma de Thingsboard:
@@ -195,7 +146,7 @@ La web (Dashboard) se encuentra aquí:
 
 ------------
 
-# 5.0 Bibliografía
+# Bibliografía
 
 [1] Open Know-How
 https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/src/branch/master/1#a40dfa47-8bff-4e28-9338-3f808ddfe6ae
