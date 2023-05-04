@@ -14,8 +14,32 @@ A continuación se muestra el esquema general del dispositivo y algunos de sus c
 
 [Diagrama electrico](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/blob/master/Diagramas/DispositivoH2O1Esquem%C3%A1tico.pdf)
 
+## 1. Elementos del repositorio
+-  #### En [**docs**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/Documentacion) encontramos
+	-  Lista de materiales y costos
+	-  Manual de operación
+	-  Fichas técnicas o datasheet de los módulos, sensores y componentes usados
+	- Documento de errores, soluciones y recomendaciones
 
-### 1 Sobre los autores
+-  #### En [**diagramas**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/Diagramas) encontramos
+	- Pictograma de conexión
+	- Esquemático de conexión
+	
+-  #### En [**codigo**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/codigo) encontramos
+	- Códigos completos
+	- Librerías a usar.
+	- Explicación.
+
+-  #### En [**Imagenes**](https://github.com/Dispositivos-Edificio-Bioclimatico/Sistema_medicion_apertura_ventanas/tree/main/notebook) encontramos
+	-  Imagenes usadas en el repositorio
+
+-  #### En [**carcasa**](https://github.com/Dispositivos-Edificio-Bioclimatico/DH2O/tree/master/Diagramas) encontramos
+	-  Planos CAD
+	-  Archivos de diseño CAD
+	-  Archivos STL para impresión 3D
+
+
+### 2 Sobre los autores
 
 |Nombre|Instituto/Organización|Email|
 | ------------ | ------------ | ------------ |
@@ -31,14 +55,14 @@ A continuación se muestra el esquema general del dispositivo y algunos de sus c
 
 ------------
 
-# Alcance
+# 3 Alcance
 
 El dispositivo H2O tiene como alcance, en esta etapa, contar con toda la documentación necesaria para ser replicado de manera eficaz y eficientemente, después de ser trabajado por un grupo de personas se espera que el proyecto tenga todo lo que se necesita para que otras personas puedan entender el funcionamiento y requisitos de operación.
 
 ------------
 
 
-### Contacto primario
+### 4 Contacto primario
 
 **Inv. A tiempo completo:** Dr. Guillermo Barrios del Valle
 
@@ -98,7 +122,7 @@ El dispositivo H2O tiene como alcance, en esta etapa, contar con toda la documen
 
 
 
-#### Seguimiento de actividades del dispositivo H2O
+#### 5 Seguimiento de actividades del dispositivo H2O
 
 |**Actividad**|**Tiempo estimado de ejecución**|**Referenciación**|
 | :------------: | :------------: | :------------: |
@@ -138,7 +162,7 @@ La web (Dashboard) se encuentra aquí:
 
 ------------
 
-# Bibliografía
+# 6 Bibliografía
 
 [1] Open Know-How
 https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/src/branch/master/1#a40dfa47-8bff-4e28-9338-3f808ddfe6ae
