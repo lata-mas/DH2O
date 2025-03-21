@@ -1,6 +1,10 @@
 # Dispositivo H2O
 
-Este dispositivo se desarrollo con lel objetivo de medir la cantidad de agua que se consume en un edificio y poder implementar medidas para evitar consumos excesivos de este valioso recurso.
+Este dispositivo se realizó gracias al apoyo del proyecto UNAM-PAPIIT IT103023.
+
+
+
+Este dispositivo se desarrollo con el objetivo de medir la cantidad de agua que se consume en un edificio y poder implementar medidas para evitar consumos excesivos de este valioso recurso.
 
 El dispositivo funciona con un módulo NodeMCU Lolin V3→ESP8266-12E, permitiendo interpretar los datos que recolecta el sensor YF-S201 (sensor de caudal de agua), el microcontrolador  permite interpretar datos y después enviarlos a través de Wifi a una plataforma de imternet. La ventaja más significativa es precisamente esa, que el módulo tiene wifi, permitiendo que pueda enviar datos en tiempo real a diferentes plataformas de visualización, ademas de su reducido tamaño.
 
